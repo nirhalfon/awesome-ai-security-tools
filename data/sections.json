@@ -1,0 +1,3573 @@
+{
+  "$schema": "schema.json",
+  "sections": [
+    {
+      "title": "Autotriage of Security Findings",
+      "anchor": "autotriage-of-security-findings",
+      "intro": "AI/LLM tools that triage, deduplicate, prioritize, or validate the output of scanners and finding sources.",
+      "entries": [
+        {
+          "name": "nuclei-autotriage",
+          "repo": "cyberok-org/nuclei-autotriage",
+          "org": "CyberOK",
+          "desc": "Two-stage LLM triage (falsifier + red-team pass) of Nuclei JSONL findings via OpenAI-compatible endpoints (vLLM/Ollama).",
+          "note": "— **note:** restrictive personal/non-commercial EULA, not a permissive OSS license.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "agent-audit",
+              "url": "https://github.com/scadastrangelove/agent-audit"
+            },
+            {
+              "label": "asamm",
+              "url": "https://github.com/scadastrangelove/asamm"
+            }
+          ]
+        },
+        {
+          "name": "seclab-taskflow-agent",
+          "repo": "GitHubSecurityLab/seclab-taskflow-agent",
+          "org": "GitHub Security Lab",
+          "desc": "YAML-driven taskflow agent framework for triaging CodeQL/SAST alerts and filtering false positives.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "SigmaOptimizer",
+              "url": "https://github.com/YusukeJustinNakajima/SigmaOptimizer"
+            }
+          ]
+        },
+        {
+          "name": "honeyslop",
+          "repo": "gadievron/honeyslop",
+          "desc": "Code-canary decoys to triage AI-hallucinated (\"slop\") vulnerability reports flooding bug-bounty programs.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "nano-analyzer",
+          "repo": "weareaisle/nano-analyzer",
+          "org": "AISLE",
+          "desc": "Minimal three-stage LLM pipeline (context → scan → skeptical triage) for zero-day discovery in C/C++.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "SigmaOptimizer",
+          "repo": "YusukeJustinNakajima/SigmaOptimizer",
+          "desc": "Generates, tests, and refines Sigma rules from real logs with false-positive checking.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "soctalk",
+              "url": "https://github.com/soctalk/soctalk"
+            },
+            {
+              "label": "seclab-taskflow-agent",
+              "url": "https://github.com/GitHubSecurityLab/seclab-taskflow-agent"
+            }
+          ]
+        },
+        {
+          "name": "ai-soc-triage-assistant",
+          "repo": "pranavibunny/ai-soc-triage-assistant",
+          "desc": "SOC alert triage assistant with prompt-injection guardrails, output validation, and MITRE ATT&CK mapping.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        }
+      ],
+      "footer": "> See also: OpenAI's *Aardvark* / *Codex Security* research previews — public references exist, but there is no standalone installable repo to badge here."
+    },
+    {
+      "title": "AI Agent & Coding-Agent Security",
+      "anchor": "ai-agent--coding-agent-security",
+      "intro": "Securing the AI agents themselves — auditing coding agents (Claude Code, Codex, OpenClaw), scanning skills / plugins / MCP manifests, and governance for agentic development. A fast-moving 2026 category, split below by role.",
+      "groups": [
+        {
+          "title": "Scanners & Auditors",
+          "entries": [
+            {
+              "name": "agent-audit",
+              "repo": "scadastrangelove/agent-audit",
+              "org": "CyberOK / S. Gordeychik",
+              "desc": "Forensic auditor for local AI coding agents (Claude Code, Codex CLI, OpenClaw) **and** project-surface scanner for repos shipping skills, plugins, and MCP manifests; 296 bundled rules across native + imported detector families, with optional LLM cross-verification.",
+              "status": [
+                "open_source"
+              ],
+              "sources": [
+                {
+                  "label": "asamm",
+                  "url": "https://github.com/scadastrangelove/asamm"
+                },
+                {
+                  "label": "ATR – Agent Threat Rules",
+                  "url": "https://github.com/panguard-ai/agent-threat-rules"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                }
+              ],
+              "related": [
+                {
+                  "label": "asamm",
+                  "url": "https://github.com/scadastrangelove/asamm"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "agentic-radar",
+                  "url": "https://github.com/splx-ai/agentic-radar"
+                },
+                {
+                  "label": "nuclei-autotriage",
+                  "url": "https://github.com/cyberok-org/nuclei-autotriage"
+                }
+              ]
+            },
+            {
+              "name": "AI-Infra-Guard",
+              "repo": "Tencent/AI-Infra-Guard",
+              "org": "Tencent Zhuque Lab",
+              "desc": "Full-stack AI red-teaming platform covering OpenClaw security scan, agent scan, skills scan, MCP scan, AI-infra vulnerability scan, and LLM jailbreak evaluation.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            },
+            {
+              "name": "SkillSpector",
+              "repo": "NVIDIA/SkillSpector",
+              "org": "NVIDIA",
+              "desc": "Security scanner for AI-agent skills used by Claude Code, Codex CLI, Gemini CLI, and similar ecosystems; combines static analysis, AST/YARA/taint checks, optional LLM semantic review, MCP least-privilege/tool-poisoning checks, risk scoring, and SARIF/JSON/Markdown output.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "skilltotal",
+                  "url": "https://github.com/pezhik/skilltotal"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            },
+            {
+              "name": "Ramparts",
+              "repo": "highflame-ai/ramparts",
+              "desc": "Rust scanner for MCP servers and agent-skill bundles with YARA rules, optional LLM analysis, OSV/CVE lookups, OWASP MCP Top 10 mapping, and SARIF/JSON/Markdown reports.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "SkillSpector",
+                  "url": "https://github.com/NVIDIA/SkillSpector"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            },
+            {
+              "name": "mcp-armor",
+              "repo": "aira-security/mcp-armor",
+              "org": "Aira Security",
+              "desc": "Local MCP security scanner with auto-discovery for agentic IDE configs, tool/resource/prompt inventory, prompt-injection checks, rug-pull and tool-poisoning detection, baseline drift monitoring, and JSON/Markdown reports.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "SkillSpector",
+                  "url": "https://github.com/NVIDIA/SkillSpector"
+                },
+                {
+                  "label": "Ramparts",
+                  "url": "https://github.com/highflame-ai/ramparts"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            },
+            {
+              "name": "aguara",
+              "repo": "garagon/aguara",
+              "desc": "Single-binary static scanner (Go, no LLM) for AI-agent skills and MCP servers; multi-layer engine (pattern + NLP + taint tracking + rug-pull detection). Companion **[aguara-mcp](https://github.com/garagon/aguara-mcp)** exposes scanning as an MCP tool.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "aguara-mcp",
+                  "url": "https://github.com/garagon/aguara-mcp"
+                },
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                }
+              ]
+            },
+            {
+              "name": "agent-scan",
+              "repo": "snyk/agent-scan",
+              "org": "Snyk",
+              "desc": "Security scanner for AI agents, MCP servers, and agent skills; the successor path for the original Invariant Labs mcp-scan work.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                }
+              ]
+            },
+            {
+              "name": "inkog",
+              "repo": "inkog-io/inkog",
+              "org": "Inkog",
+              "desc": "Commercial-backed static security scanner for AI agents across LangChain, LangGraph, CrewAI, AutoGen, and no-code workflows; Apache-2.0 CLI with proprietary deep-scan engine.",
+              "status": [
+                "commercial_open"
+              ],
+              "related": [
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                },
+                {
+                  "label": "agentic-radar",
+                  "url": "https://github.com/splx-ai/agentic-radar"
+                }
+              ]
+            },
+            {
+              "name": "AgentShield",
+              "repo": "affaan-m/agentshield",
+              "desc": "Security scanner for AI-agent configurations, MCP servers, hooks, and tool permissions with CLI, GitHub Action, and app workflows.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                }
+              ]
+            },
+            {
+              "name": "repo-forensics",
+              "repo": "alexgreensh/repo-forensics",
+              "desc": "Offline scanner for AI-agent repos, skills, plugins, and MCP servers; license is PolyForm Noncommercial.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                }
+              ]
+            },
+            {
+              "name": "skill-scanner",
+              "repo": "cisco-ai-defense/skill-scanner",
+              "org": "Cisco AI Defense",
+              "desc": "Scanner for agent skills combining YAML + YARA patterns, LLM-as-a-judge, and behavioral dataflow analysis (Codex / Cursor skill formats).",
+              "status": [
+                "commercial_open"
+              ],
+              "related": [
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            },
+            {
+              "name": "mcp-scanner",
+              "repo": "cisco-ai-defense/mcp-scanner",
+              "org": "Cisco AI Defense",
+              "desc": "Scanner for MCP servers and agentic tool surfaces, covering tools, prompts, resources, package risk, malware indicators, and deployment readiness.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                }
+              ]
+            },
+            {
+              "name": "mcp-guardian",
+              "repo": "alexandriashai/mcp-guardian",
+              "desc": "JS/TS library and CLI for detecting prompt injection in MCP tool descriptions and pinning tool definitions.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                }
+              ]
+            },
+            {
+              "name": "agentic-radar",
+              "repo": "splx-ai/agentic-radar",
+              "org": "SplxAI",
+              "desc": "CLI security scanner for agentic workflows (LangGraph, CrewAI, n8n, etc.) — maps tools/data flows and flags risks.",
+              "status": [
+                "commercial_open"
+              ]
+            },
+            {
+              "name": "skilltotal",
+              "repo": "pezhik/skilltotal",
+              "desc": "Offline deterministic static scanner (regex + AST, no LLM, no account) for AI components — agent skills/plugins, MCP servers, npm & PyPI packages, and git repos; flags supply-chain risk, dangerous capabilities, prompt-injection surfaces, MCP tool poisoning/shadowing, and data-exfiltration paths, maps to the OWASP Agentic Skills Top 10, and emits JSON + SARIF 2.1.0. *(skilltotal.ai)*",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Frameworks, Rule Standards & Benchmarks",
+          "entries": [
+            {
+              "name": "asamm",
+              "repo": "scadastrangelove/asamm",
+              "org": "CyberOK / S. Gordeychik",
+              "desc": "*Agentic SAMM* — an OWASP SAMM extension for AI-driven development: an entry-point-based threat taxonomy plus 17 controls across 5 SAMM functions (Governance, Design, Implementation, Verification, Operations) with L1/L2/L3 maturity. License: CC BY-SA 4.0.",
+              "status": [
+                "research"
+              ],
+              "sources": [
+                {
+                  "label": "OWASP SAMM",
+                  "url": "https://owaspsamm.org/"
+                },
+                {
+                  "label": "NIST AI RMF",
+                  "url": "https://www.nist.gov/itl/ai-risk-management-framework"
+                },
+                {
+                  "label": "NCSC Secure AI Guidelines",
+                  "url": "https://www.ncsc.gov.uk/collection/guidelines-secure-ai-system-development"
+                },
+                {
+                  "label": "MCP Security Best Practices",
+                  "url": "https://modelcontextprotocol.io/"
+                }
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                }
+              ]
+            },
+            {
+              "name": "agent-threat-rules (ATR)",
+              "repo": "panguard-ai/agent-threat-rules",
+              "desc": "Open, versioned, machine-readable detection-rule format for AI-agent threats (prompt injection, tool poisoning, MCP attacks, skill compromise) — \"Sigma for agents\" (MIT). Engine-agnostic; converts to Splunk/Elastic/SARIF.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "aguara",
+                  "url": "https://github.com/garagon/aguara"
+                }
+              ]
+            },
+            {
+              "name": "MCP-Security-Checklist",
+              "repo": "slowmist/MCP-Security-Checklist",
+              "org": "SlowMist",
+              "desc": "Security checklist for MCP clients, servers, multi-MCP deployments, lifecycle controls, authz/authn, isolation, and crypto-specific MCP integrations.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                },
+                {
+                  "label": "ATR – Agent Threat Rules",
+                  "url": "https://github.com/panguard-ai/agent-threat-rules"
+                }
+              ]
+            },
+            {
+              "name": "Anthropic-Cybersecurity-Skills",
+              "repo": "mukul975/Anthropic-Cybersecurity-Skills",
+              "desc": "Large community cybersecurity skill library for AI agents, mapped to MITRE ATT&CK, NIST CSF, MITRE ATLAS, D3FEND, and NIST AI RMF.",
+              "note": "— **note:** independent community project, not affiliated with Anthropic.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "sast-skills",
+                  "url": "https://github.com/utkusen/sast-skills"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                }
+              ]
+            },
+            {
+              "name": "Claude-BugHunter",
+              "repo": "elementalsouls/Claude-BugHunter",
+              "desc": "Claude Code / agent-skill bundle for authorized bug hunting and external red-team workflows across web, API, identity, cloud, recon, reporting, Burp MCP, slash commands, and the cbh CLI.",
+              "note": "— **note:** skill bundle and workflow knowledge base, not a standalone scanner.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "authorized_testing_only"
+              ],
+              "related": [
+                {
+                  "label": "sast-skills",
+                  "url": "https://github.com/utkusen/sast-skills"
+                },
+                {
+                  "label": "Anthropic-Cybersecurity-Skills",
+                  "url": "https://github.com/mukul975/Anthropic-Cybersecurity-Skills"
+                }
+              ]
+            },
+            {
+              "name": "AgentDojo",
+              "repo": "ethz-spylab/agentdojo",
+              "desc": "Benchmark environment for prompt-injection attacks and defenses in tool-using LLM agents.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "ATR – Agent Threat Rules",
+                  "url": "https://github.com/panguard-ai/agent-threat-rules"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Runtime Protection & Enforcement",
+          "entries": [
+            {
+              "name": "ToolHive",
+              "repo": "stacklok/toolhive",
+              "org": "Stacklok",
+              "desc": "Platform for running MCP servers in isolated containers with per-request identity/access policy, registry and gateway workflows, audit logs, Kubernetes operator support, and observability hooks.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "microsandbox",
+                  "url": "https://github.com/superradcompany/microsandbox"
+                },
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                }
+              ]
+            },
+            {
+              "name": "Pipelock",
+              "repo": "luckyPipewrench/pipelock",
+              "desc": "AI-agent firewall and verifiable egress-control layer mediating HTTP, WebSocket, CONNECT, MCP, and A2A traffic to detect prompt injection, secret exfiltration, SSRF, and suspicious outbound actions.",
+              "note": "— **note:** open-source core is Apache-2.0; commercial reporting/features are also advertised.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "ToolHive",
+                  "url": "https://github.com/stacklok/toolhive"
+                },
+                {
+                  "label": "mcp-context-protector",
+                  "url": "https://github.com/trailofbits/mcp-context-protector"
+                }
+              ]
+            },
+            {
+              "name": "mcp-context-protector",
+              "repo": "trailofbits/mcp-context-protector",
+              "org": "Trail of Bits",
+              "desc": "MCP security wrapper that sits in front of downstream MCP servers, scans tool responses with guardrail providers, and supports quarantine/review workflows for desktop and coding-agent MCP configs.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – mcp-scanner",
+                  "url": "https://github.com/cisco-ai-defense/mcp-scanner"
+                },
+                {
+                  "label": "ToolHive",
+                  "url": "https://github.com/stacklok/toolhive"
+                },
+                {
+                  "label": "Pipelock",
+                  "url": "https://github.com/luckyPipewrench/pipelock"
+                }
+              ]
+            },
+            {
+              "name": "MCP Defender",
+              "repo": "MCP-Defender/MCP-Defender",
+              "desc": "Desktop app that proxies MCP tool-call requests and responses for Cursor, Claude, VS Code, and Windsurf, checks intercepted traffic against signatures, and prompts users to allow or block suspicious calls.",
+              "note": "— **note:** AGPL-3.0 licensed; project has been acquired by Docker.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "ToolHive",
+                  "url": "https://github.com/stacklok/toolhive"
+                },
+                {
+                  "label": "mcp-context-protector",
+                  "url": "https://github.com/trailofbits/mcp-context-protector"
+                }
+              ]
+            },
+            {
+              "name": "MCP Gateway",
+              "repo": "lasso-security/mcp-gateway",
+              "org": "Lasso Security",
+              "desc": "Plugin-based MCP gateway that proxies configured MCP servers, sanitizes sensitive request/response data, supports guardrail plugins such as basic masking and Presidio, and runs a server reputation/risk check before loading MCP servers.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "ToolHive",
+                  "url": "https://github.com/stacklok/toolhive"
+                },
+                {
+                  "label": "Pipelock",
+                  "url": "https://github.com/luckyPipewrench/pipelock"
+                },
+                {
+                  "label": "mcp-context-protector",
+                  "url": "https://github.com/trailofbits/mcp-context-protector"
+                }
+              ]
+            },
+            {
+              "name": "Parallax",
+              "repo": "agent-defense/parallax",
+              "desc": "Rust runtime policy engine for AI agents: evaluates lifecycle events with regex, keyword, Sigma, CEL, and SQL rules to block or redact prompt injection, data exfiltration, dangerous tool calls, and secret leakage.",
+              "note": "— **note:** early-stage project with limited adoption signal.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Pipelock",
+                  "url": "https://github.com/luckyPipewrench/pipelock"
+                },
+                {
+                  "label": "Armorer Guard",
+                  "url": "https://github.com/ArmorerLabs/Armorer-Guard"
+                }
+              ]
+            },
+            {
+              "name": "Armorer Guard",
+              "repo": "ArmorerLabs/Armorer-Guard",
+              "desc": "Local Rust scanner and MCP proxy for AI-agent prompt injection, credential leakage, exfiltration, and risky tool-call arguments, with structured reasons and no scanner network calls.",
+              "note": "— **note:** young project with limited independent adoption signal.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "ATR – Agent Threat Rules",
+                  "url": "https://github.com/panguard-ai/agent-threat-rules"
+                }
+              ]
+            },
+            {
+              "name": "onecli",
+              "repo": "onecli/onecli",
+              "desc": "Credential gateway and encrypted vault for AI agents; injects real API credentials at the gateway so agents only see placeholder keys.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                }
+              ]
+            },
+            {
+              "name": "microsandbox",
+              "repo": "superradcompany/microsandbox",
+              "desc": "Local-first, microVM-backed programmable sandboxes for AI agents with SDKs, CLI, MCP support, and rootless hardware isolation.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                }
+              ]
+            },
+            {
+              "name": "agentguard",
+              "repo": "GoPlusSecurity/agentguard",
+              "desc": "Real-time security layer for coding agents: hooks scan every new skill, block dangerous actions before execution, run daily posture patrols, and track which skill triggered each action (incl. Web3-specific checks).",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agent-audit",
+                  "url": "https://github.com/scadastrangelove/agent-audit"
+                },
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                }
+              ]
+            },
+            {
+              "name": "defenseclaw",
+              "repo": "cisco-ai-defense/defenseclaw",
+              "org": "Cisco AI Defense",
+              "desc": "Enforcement and evidence layer for agentic deployments: static CodeGuard checks, sandboxing, registry ingestion with SSRF guards, and audit/observability.",
+              "status": [
+                "commercial_open"
+              ],
+              "related": [
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                },
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                }
+              ]
+            },
+            {
+              "name": "AgentFence",
+              "repo": "agentfence/agentfence",
+              "desc": "Runtime-oriented test harness for deployed agents, probing prompt injection, secret leakage, and system-instruction exposure.",
+              "note": "*Early-stage project.*",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "Snyk Agent Scan",
+                  "url": "https://github.com/snyk/agent-scan"
+                }
+              ]
+            },
+            {
+              "name": "clawsec",
+              "repo": "prompt-security/clawsec",
+              "org": "Prompt Security",
+              "desc": "Security skill suite for OpenClaw-family agents; AGPL-3.0 licensed.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "agentguard",
+                  "url": "https://github.com/GoPlusSecurity/agentguard"
+                },
+                {
+                  "label": "Cisco AI Defense – skill-scanner",
+                  "url": "https://github.com/cisco-ai-defense/skill-scanner"
+                }
+              ]
+            },
+            {
+              "name": "h5i",
+              "repo": "h5i-dev/h5i",
+              "desc": "Local Rust CLI for auditable coding-agent workspaces: per-agent worktrees with sandbox policies, provenance capture, peer review, neutral verification, secret/prompt-injection audit signals, and refs/h5i/* run metadata.",
+              "note": "— **note:** security-adjacent agent-workspace governance tool, not a vulnerability scanner or VM-equivalent sandbox.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "microsandbox",
+                  "url": "https://github.com/superradcompany/microsandbox"
+                },
+                {
+                  "label": "defenseclaw",
+                  "url": "https://github.com/cisco-ai-defense/defenseclaw"
+                }
+              ]
+            },
+            {
+              "name": "DvalinCode",
+              "repo": "arthurpanhku/dvalincode",
+              "desc": "Local-first AI coding agent with runtime governance controls: org/repo policy gates for tools, models, MCP servers, paths, and commands, plus provider/shell/MCP egress controls and hash-chained audit logs.",
+              "note": "— **note:** young project with limited independent adoption signal.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "h5i",
+                  "url": "https://github.com/h5i-dev/h5i"
+                },
+                {
+                  "label": "Pipelock",
+                  "url": "https://github.com/luckyPipewrench/pipelock"
+                },
+                {
+                  "label": "Armorer Guard",
+                  "url": "https://github.com/ArmorerLabs/Armorer-Guard"
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "AI/ML Supply Chain & Model Security",
+      "anchor": "aiml-supply-chain--model-security",
+      "intro": "Tools for securing model artifacts, serialized ML files, AI/ML supply-chain surfaces, and malicious-package detection datasets/benchmarks.",
+      "entries": [
+        {
+          "name": "Fraim",
+          "repo": "fraim-dev/fraim",
+          "desc": "Framework for AI-powered security workflows including LLM SAST and IaC analysis with SARIF/HTML output.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "sast-skills",
+              "url": "https://github.com/utkusen/sast-skills"
+            }
+          ]
+        },
+        {
+          "name": "Adversarial Robustness Toolbox (ART)",
+          "repo": "Trusted-AI/adversarial-robustness-toolbox",
+          "org": "LF AI & Data / IBM",
+          "desc": "Flagship machine-learning security library for evaluating and defending models against evasion, poisoning, extraction, and inference attacks across major ML frameworks.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "Foolbox",
+              "url": "https://github.com/bethgelab/foolbox"
+            },
+            {
+              "label": "PrivacyRaven",
+              "url": "https://github.com/trailofbits/PrivacyRaven"
+            }
+          ]
+        },
+        {
+          "name": "Foolbox",
+          "repo": "bethgelab/foolbox",
+          "desc": "Classic Python toolbox for generating adversarial examples and benchmarking robustness of PyTorch, TensorFlow, and JAX models.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "Adversarial Robustness Toolbox",
+              "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox"
+            }
+          ]
+        },
+        {
+          "name": "modelscan",
+          "repo": "protectai/modelscan",
+          "org": "Protect AI",
+          "desc": "Scans ML model files for unsafe serialization patterns and embedded code, with a focus on model serialization attacks.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "Fickling",
+              "url": "https://github.com/trailofbits/fickling"
+            },
+            {
+              "label": "picklescan",
+              "url": "https://github.com/mmaitre314/picklescan"
+            },
+            {
+              "label": "ai-exploits",
+              "url": "https://github.com/protectai/ai-exploits"
+            }
+          ]
+        },
+        {
+          "name": "Fickling",
+          "repo": "trailofbits/fickling",
+          "org": "Trail of Bits",
+          "desc": "Python pickle decompiler, rewriter, and static analyzer for inspecting and detecting malicious pickle/PyTorch payloads.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "modelscan",
+              "url": "https://github.com/protectai/modelscan"
+            },
+            {
+              "label": "picklescan",
+              "url": "https://github.com/mmaitre314/picklescan"
+            }
+          ]
+        },
+        {
+          "name": "picklescan",
+          "repo": "mmaitre314/picklescan",
+          "desc": "Lightweight CLI/library for detecting suspicious Python pickle operations in ML and model artifacts.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "modelscan",
+              "url": "https://github.com/protectai/modelscan"
+            },
+            {
+              "label": "Fickling",
+              "url": "https://github.com/trailofbits/fickling"
+            }
+          ]
+        },
+        {
+          "name": "AIsbom",
+          "repo": "Lab700xOrg/aisbom",
+          "desc": "AI software bill of materials tooling for AI/ML supply-chain inventory and provenance metadata.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "modelscan",
+              "url": "https://github.com/protectai/modelscan"
+            },
+            {
+              "label": "model-provenance-kit",
+              "url": "https://github.com/cisco-ai-defense/model-provenance-kit"
+            }
+          ]
+        },
+        {
+          "name": "model-provenance-kit",
+          "repo": "cisco-ai-defense/model-provenance-kit",
+          "org": "Cisco AI Defense",
+          "desc": "Toolkit for model-family provenance and fingerprinting across model weights, tokenizers, and architecture signals.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "AIsbom",
+              "url": "https://github.com/Lab700xOrg/aisbom"
+            }
+          ]
+        },
+        {
+          "name": "pickle-fuzzer",
+          "repo": "cisco-ai-defense/pickle-fuzzer",
+          "org": "Cisco AI Defense",
+          "desc": "Structure-aware fuzzer for pickle scanners, useful for hardening tools such as modelscan, Fickling, and picklescan.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "modelscan",
+              "url": "https://github.com/protectai/modelscan"
+            },
+            {
+              "label": "Fickling",
+              "url": "https://github.com/trailofbits/fickling"
+            },
+            {
+              "label": "picklescan",
+              "url": "https://github.com/mmaitre314/picklescan"
+            }
+          ]
+        },
+        {
+          "name": "Medusa",
+          "repo": "Pantheon-Security/medusa",
+          "org": "Pantheon Security",
+          "desc": "AI-first security scanner for AI/ML repos, agents, and MCP surfaces; AGPL-3.0 licensed.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "agent-audit",
+              "url": "https://github.com/scadastrangelove/agent-audit"
+            },
+            {
+              "label": "modelscan",
+              "url": "https://github.com/protectai/modelscan"
+            }
+          ]
+        },
+        {
+          "name": "PrivacyRaven",
+          "repo": "trailofbits/PrivacyRaven",
+          "org": "Trail of Bits",
+          "desc": "Privacy-testing library for deep-learning systems, covering model extraction and membership-inference style attacks.",
+          "note": "— **note:** archived/hiatus project, but still a useful reference implementation.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "Adversarial Robustness Toolbox",
+              "url": "https://github.com/Trusted-AI/adversarial-robustness-toolbox"
+            }
+          ]
+        },
+        {
+          "name": "gym-malware",
+          "repo": "endgameinc/gym-malware",
+          "desc": "OpenAI Gym environment for reinforcement-learning agents that mutate PE malware to evade static ML malware detectors.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "deep-pwning",
+          "repo": "cchio/deep-pwning",
+          "desc": "Historical \"Metasploit for machine learning\" framework for experimenting with adversarial robustness of ML models.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "open-malicious-code-benchmark",
+          "repo": "False-Positive-Community/open-malicious-code-benchmark",
+          "org": "False Positive Community",
+          "desc": "OMCBench benchmark suite for malicious-code/package detection: labeled Python and JavaScript package archives, common runners, and published precision/recall/F1 metrics.",
+          "note": "— **note:** evaluates an unreleased commercial ML detector (MOLOT / PT Application Inspector) alongside open-source baselines.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "GuardDog",
+              "url": "https://github.com/DataDog/guarddog"
+            },
+            {
+              "label": "OSSGadget",
+              "url": "https://github.com/microsoft/OSSGadget"
+            },
+            {
+              "label": "malicious-code-ruleset",
+              "url": "https://github.com/apiiro/malicious-code-ruleset"
+            },
+            {
+              "label": "bandit4mal",
+              "url": "https://github.com/lyvd/bandit4mal"
+            }
+          ]
+        },
+        {
+          "name": "malicious-software-packages-dataset",
+          "repo": "DataDog/malicious-software-packages-dataset",
+          "org": "Datadog Security Labs",
+          "desc": "Human-vetted dataset of malicious software packages across npm, PyPI, IDE extensions, and AI Skills, useful for detector training and evaluation.",
+          "note": "— **note:** contains real malware samples; Datadog notes selection bias because many samples were identified by GuardDog.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "GuardDog",
+              "url": "https://github.com/DataDog/guarddog"
+            },
+            {
+              "label": "pypi_malregistry",
+              "url": "https://github.com/lxyeternal/pypi_malregistry"
+            }
+          ]
+        },
+        {
+          "name": "GuardDog",
+          "repo": "DataDog/guarddog",
+          "org": "Datadog",
+          "desc": "CLI for detecting malicious PyPI, npm, Go, RubyGems, GitHub Actions, and VSCode extension packages using Semgrep rules and package-metadata heuristics.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "malicious-software-packages-dataset",
+              "url": "https://github.com/DataDog/malicious-software-packages-dataset"
+            },
+            {
+              "label": "Packj",
+              "url": "https://github.com/ossillate-inc/packj"
+            }
+          ]
+        },
+        {
+          "name": "package-analysis",
+          "repo": "ossf/package-analysis",
+          "org": "OpenSSF",
+          "desc": "Sandboxed static/dynamic analysis pipeline for open-source packages, capturing filesystem, process, and network behavior and publishing data for malicious-package research.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "malicious-packages",
+              "url": "https://github.com/ossf/malicious-packages"
+            },
+            {
+              "label": "package-feeds",
+              "url": "https://github.com/ossf/package-feeds"
+            }
+          ]
+        },
+        {
+          "name": "malicious-code-ruleset",
+          "repo": "apiiro/malicious-code-ruleset",
+          "org": "Apiiro",
+          "desc": "Focused Semgrep ruleset for malicious-code patterns such as dynamic execution and obfuscation, used as an OMCBench baseline.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "open-malicious-code-benchmark",
+              "url": "https://github.com/False-Positive-Community/open-malicious-code-benchmark"
+            }
+          ]
+        },
+        {
+          "name": "pypi_malregistry",
+          "repo": "lxyeternal/pypi_malregistry",
+          "desc": "ASE'23 / USENIX Security'26 malicious-PyPI dataset with more than 10k malicious package versions.",
+          "note": "— **note:** no LICENSE file found and the repository contains malware samples; handle in an isolated environment.",
+          "status": [
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "malicious-software-packages-dataset",
+              "url": "https://github.com/DataDog/malicious-software-packages-dataset"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Pentest & Red-Team Agents",
+      "anchor": "pentest--red-team-agents",
+      "intro": "Autonomous and semi-autonomous AI agents for penetration testing, exploitation, and attack simulation.",
+      "entries": [
+        {
+          "name": "PentestGPT",
+          "repo": "GreyDGL/PentestGPT",
+          "desc": "The original USENIX'24 LLM pentest agent; re-released as an autonomous pipeline with strong benchmark results.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "PentAGI",
+          "repo": "vxcontrol/pentagi",
+          "org": "VXControl",
+          "desc": "Fully autonomous multi-agent pentest framework with Docker sandboxing.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "CAI – Cybersecurity AI",
+          "repo": "aliasrobotics/cai",
+          "org": "Alias Robotics",
+          "desc": "Modular, bug-bounty-ready agent framework supporting 300+ LLM models. MIT for research; separate commercial license for production/on-prem.",
+          "status": [
+            "open_source",
+            "commercial_open"
+          ]
+        },
+        {
+          "name": "Strix",
+          "repo": "usestrix/strix",
+          "desc": "Autonomous \"AI hackers\" that dynamically run code and validate vulnerabilities with PoCs (Apache-2.0).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "hackingBuddyGPT",
+          "repo": "ipa-lab/hackingBuddyGPT",
+          "desc": "Minimal (~50 LOC) research framework for LLM-driven Linux priv-esc and web pentesting (FSE'23).",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "Nebula",
+          "repo": "berylliumsec/nebula",
+          "desc": "AI pentesting CLI assistant with local-LLM support (Llama-3.1, Mistral, DeepSeek).",
+          "status": [
+            "open_source",
+            "commercial_open"
+          ]
+        },
+        {
+          "name": "HexStrike-AI",
+          "repo": "0x4m4/hexstrike-ai",
+          "desc": "MCP server exposing 150+ security tools (nmap, gobuster, nuclei, …) to AI agents (MIT).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "Burp Suite MCP Server",
+          "repo": "PortSwigger/mcp-server",
+          "org": "PortSwigger",
+          "desc": "Official Burp Suite extension exposing Burp to AI clients through MCP.",
+          "note": "— **note:** GPL-3.0 licensed.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "HexStrike-AI",
+              "url": "https://github.com/0x4m4/hexstrike-ai"
+            }
+          ]
+        },
+        {
+          "name": "pentest-ai",
+          "repo": "0xSteph/pentest-ai",
+          "desc": "Offensive-security MCP server with 200+ wrapped tools, specialist agents, and OWASP-oriented probes for authorized testing.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "pentest-ai-agents",
+              "url": "https://github.com/0xSteph/pentest-ai-agents"
+            }
+          ]
+        },
+        {
+          "name": "pentest-ai-agents",
+          "repo": "0xSteph/pentest-ai-agents",
+          "desc": "Collection of Claude Code offensive-security subagents for authorized penetration-testing research.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "pentest-ai",
+              "url": "https://github.com/0xSteph/pentest-ai"
+            }
+          ]
+        },
+        {
+          "name": "DarkMoon",
+          "repo": "ASCIT31/Dark-Moon",
+          "desc": "Autonomous AI penetration-testing platform that orchestrates specialized web, AD, Kubernetes, CMS, and framework agents through an MCP-controlled Docker toolbox with local privacy-tokenization for sensitive target data.",
+          "note": "— **note:** GPL-3.0 licensed; heavy Docker/LLM stack, use only for authorized testing.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "PentAGI",
+              "url": "https://github.com/vxcontrol/pentagi"
+            },
+            {
+              "label": "HexStrike-AI",
+              "url": "https://github.com/0x4m4/hexstrike-ai"
+            },
+            {
+              "label": "pentest-ai",
+              "url": "https://github.com/0xSteph/pentest-ai"
+            }
+          ]
+        },
+        {
+          "name": "T3MP3ST",
+          "repo": "elder-plinius/T3MP3ST",
+          "desc": "Autonomous offensive-security meta-harness that wraps local or API-backed coding agents into a multi-agent recon-to-exploit workflow with MCP/API, War Room UI, tool arsenal, and committed benchmark artifacts.",
+          "note": "— **note:** very new AGPL-3.0 project with bold benchmark claims; use only for authorized testing and verify independently before operational use.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "copyleft",
+            "early_stage",
+            "authorized_testing_only"
+          ],
+          "related": [
+            {
+              "label": "PentAGI",
+              "url": "https://github.com/vxcontrol/pentagi"
+            },
+            {
+              "label": "HexStrike-AI",
+              "url": "https://github.com/0x4m4/hexstrike-ai"
+            },
+            {
+              "label": "pentest-ai",
+              "url": "https://github.com/0xSteph/pentest-ai"
+            }
+          ]
+        },
+        {
+          "name": "Shannon",
+          "repo": "KeygraphHQ/shannon",
+          "desc": "White-box autonomous AI pentester with strong XBOW-benchmark results.",
+          "note": "*Shannon Lite is AGPL-3.0; Shannon Pro is commercial.*",
+          "status": [
+            "open_source",
+            "commercial_open"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "AIDA",
+          "repo": "Vasco0x4/AIDA",
+          "desc": "Model-agnostic autonomous pentest agent running inside an isolated Docker environment; AGPL-3.0 licensed.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "HackSynth",
+          "repo": "aielte-research/HackSynth",
+          "desc": "Planner/summarizer LLM-agent framework for autonomous penetration testing and benchmark evaluation; AGPL-3.0 licensed.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "VulnBot",
+          "repo": "KHenryAegis/VulnBot",
+          "desc": "Multi-agent collaborative penetration-testing framework with RAG support.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "PentestAgent",
+          "repo": "GH05TCREW/pentestagent",
+          "desc": "Black-box AI pentest framework with MCP, multi-agent spawning, and persistent sessions.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "cyber-security-llm-agents",
+          "repo": "NVISOsecurity/cyber-security-llm-agents",
+          "org": "NVISO",
+          "desc": "AutoGen-based agents for cybersecurity tasks (shown at RSAC 2024).",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "Pentest-Swarm-AI",
+          "repo": "Armur-Ai/Pentest-Swarm-AI",
+          "desc": "Swarm-intelligence multi-agent pentest with stigmergic blackboard coordination (Go).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "hackGPT",
+          "repo": "NoDataFound/hackGPT",
+          "desc": "LLM offensive-security toolkit.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "AI-Powered Recon & Narrow ML Tools",
+      "anchor": "ai-powered-recon--narrow-ml-tools",
+      "intro": "Hyper-specific AI/ML tools for a single offensive-security, recon, or detection step — the subwiz/eyeballer pattern rather than broad autonomous agents. 🅐 = self-contained trained model or learned model/pattern engine; 🅑 = LLM wrapper that calls an external API.",
+      "groups": [
+        {
+          "title": "Subdomain & DNS Prediction",
+          "entries": [
+            {
+              "name": "subwiz",
+              "repo": "hadriansecurity/subwiz",
+              "org": "Hadrian Security",
+              "desc": "🅐 Lightweight nanoGPT model that predicts resolvable subdomains via beam search; model weights are published on Hugging Face.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "HadrianSecurity/subwiz model",
+                  "url": "https://huggingface.co/HadrianSecurity/subwiz"
+                }
+              ]
+            },
+            {
+              "name": "regulator",
+              "repo": "cramppet/regulator",
+              "desc": "🅐 Learns and ranks regex-like naming patterns from known subdomains to generate likely new candidates.",
+              "note": "— **note:** no LICENSE file found; treat as source-available until clarified.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "subwiz",
+                  "url": "https://github.com/hadriansecurity/subwiz"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Recon Screenshot Triage",
+          "entries": [
+            {
+              "name": "eyeballer",
+              "repo": "BishopFox/eyeballer",
+              "org": "Bishop Fox",
+              "desc": "🅐 Convolutional neural network that classifies pentest/recon screenshots (login pages, webapps, old-looking sites, parked domains, and custom 404s) for attack-surface triage.",
+              "note": "— **note:** GPL-3.0 licensed.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Software / Tech Fingerprinting",
+          "entries": [
+            {
+              "name": "GyoiThon",
+              "repo": "gyoisamurai/GyoiThon",
+              "desc": "🅐 Machine-learning-assisted web intelligence tool that fingerprints products, versions, CVEs, login pages, debug messages, and related web-server signals from HTTP responses.",
+              "note": "— **note:** older project; Apache-2.0 licensed, but maintenance appears low.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "http-fingerprint-transformer",
+              "repo": "Darwinkel/bachelor-thesis-information-science",
+              "desc": "🅐 Transformer-encoded HTTP-header fingerprinting experiment for classifying web-server software and versions.",
+              "note": "— **note:** thesis artifact; code is GPL-3.0 and data is CC BY-SA 4.0.",
+              "status": [
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "AI-Assisted Fuzzing",
+          "entries": [
+            {
+              "name": "ffufai",
+              "repo": "jthack/ffufai",
+              "org": "Joseph Thacker",
+              "desc": "🅑 AI wrapper around the ffuf web fuzzer that suggests file extensions and paths from the target URL and headers using OpenAI or Anthropic models.",
+              "note": "— **note:** requires an LLM API key; README states MIT but no LICENSE file was found.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Password / Credential ML",
+          "entries": [
+            {
+              "kind": "hf_model",
+              "name": "PassGPT",
+              "model": "javirandor/passgpt-10characters",
+              "org": "Rando et al.",
+              "desc": "🅐 GPT-style password model trained on leaked passwords for research on password generation and strength estimation.",
+              "note": "Research-only / non-commercial use; related code: [javirandor/passgpt](https://github.com/javirandor/passgpt).",
+              "license": "CC BY-NC-4.0",
+              "access": "open 10-char model; 16-char variant gated",
+              "artifacts": "PyTorch/Safetensors",
+              "status": [
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "PassGAN",
+              "repo": "brannondorsey/PassGAN",
+              "desc": "🅐 WGAN that learns password distributions from leaks to generate guesses; historical reference implementation of the PassGAN paper (MIT).",
+              "status": [
+                "research"
+              ]
+            },
+            {
+              "name": "neural_network_cracking",
+              "repo": "cupslab/neural_network_cracking",
+              "org": "CMU CUPS Lab",
+              "desc": "🅐 RNN password-guessing model from *Fast, Lean, and Accurate: Modeling Password Guessability Using Neural Networks* (USENIX Security 2016); Apache-2.0 licensed.",
+              "status": [
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "PassGPT",
+                  "url": "https://huggingface.co/javirandor/passgpt-10characters"
+                },
+                {
+                  "label": "PassGAN",
+                  "url": "https://github.com/brannondorsey/PassGAN"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Phishing Detection (Visual / URL)",
+          "entries": [
+            {
+              "kind": "hf_model",
+              "name": "phishing-url-detection",
+              "model": "pirocheto/phishing-url-detection",
+              "desc": "🅐 Packaged URL phishing classifier with ONNX and pickle artifacts.",
+              "note": "Model card recommends ONNX over pickle for safer inference.",
+              "license": "MIT",
+              "access": "open",
+              "artifacts": "ONNX, pickle",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "Phishing Email Detection DistilBERT v2.4.1",
+              "model": "cybersectony/phishing-email-detection-distilbert_v2.4.1",
+              "desc": "DistilBERT text-classification model for email and URL phishing detection, trained on a public Hugging Face phishing-email dataset.",
+              "note": "— **note:** strong download signal, but independently verify the very high published metrics before production use.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "Safetensors",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "early_stage"
+              ]
+            },
+            {
+              "name": "PhishIntention",
+              "repo": "lindsey98/PhishIntention",
+              "desc": "🅐 Deep-vision phishing detector that infers both brand intention and credential-taking intention from webpage appearance and dynamics (USENIX Security 2022).",
+              "note": "— **note:** CC0-1.0 licensed.",
+              "status": [
+                "research"
+              ]
+            },
+            {
+              "name": "VisualPhishNet",
+              "repo": "S-Abdelnabi/VisualPhishNet",
+              "org": "CISPA",
+              "desc": "🅐 Triplet CNN for zero-day phishing detection by visual similarity to trusted websites (ACM CCS 2020).",
+              "note": "— **note:** no LICENSE file found; dataset access is research-request based.",
+              "status": [
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "ML-Generated Detection Rules",
+          "entries": [
+            {
+              "name": "yaraml_rules",
+              "repo": "sophos/yaraml_rules",
+              "org": "Sophos",
+              "desc": "🅐 Trains scikit-learn classifiers on malware/benign corpora and compiles the learned model into deployable YARA rules (Apache-2.0).",
+              "status": [
+                "open_source"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Defensive Trained-Model Detectors",
+          "entries": [
+            {
+              "name": "DeepSQLi",
+              "repo": "gatewayd-io/DeepSQLi",
+              "org": "GatewayD",
+              "desc": "🅐 Deep-learning SQL-injection detector with dataset, trained models, and a Flask Prediction API for GatewayD IDS/IPS integration.",
+              "note": "— **note:** AGPL-3.0 licensed; defensive detector rather than offensive generator.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "deepsecrets",
+              "repo": "ntoskernel/deepsecrets",
+              "desc": "Semantic secrets scanner using lexing/parsing, entropy checks, and hashed-known-secret matching across 500+ languages.",
+              "note": "— **note:** useful narrow detector, but not a trained ML model.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "VLAI Vulnerability Severity Classifier",
+              "model": "CIRCL/vulnerability-severity-classification-roberta-base",
+              "org": "CIRCL",
+              "desc": "RoBERTa-based vulnerability-severity classifier trained on CIRCL vulnerability scores to assist triage before manual CVSS scoring.",
+              "license": "CC-BY-4.0",
+              "access": "open",
+              "artifacts": "Safetensors",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "AI-Powered SAST & Secure Code Review",
+      "anchor": "ai-powered-sast--secure-code-review",
+      "intro": "Static analysis and secure code review enhanced with LLMs.",
+      "entries": [
+        {
+          "name": "Vulnhuntr",
+          "repo": "protectai/vulnhuntr",
+          "org": "Protect AI",
+          "desc": "Zero-shot vulnerability discovery in Python repos via LLM call-chain analysis; credited with a 0-day RCE in Ragflow.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "xvulnhuntr",
+              "url": "https://github.com/CompassSecurity/xvulnhuntr"
+            },
+            {
+              "label": "vulnhuntr-mod",
+              "url": "https://github.com/kxcode/vulnhuntr-mod"
+            }
+          ]
+        },
+        {
+          "name": "deepsec",
+          "repo": "vercel-labs/deepsec",
+          "org": "Vercel Labs",
+          "desc": "Agent-powered security harness for scanning large codebases with coding agents, resumable parallel runs, custom matchers, and optional revalidation.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "claude-code-security-review",
+              "url": "https://github.com/anthropics/claude-code-security-review"
+            },
+            {
+              "label": "sast-skills",
+              "url": "https://github.com/utkusen/sast-skills"
+            }
+          ]
+        },
+        {
+          "name": "claude-code-security-review",
+          "repo": "anthropics/claude-code-security-review",
+          "org": "Anthropic",
+          "desc": "Official Claude-based semantic SAST GitHub Action that reviews PR diffs.",
+          "status": [
+            "commercial_open"
+          ]
+        },
+        {
+          "name": "IRIS",
+          "repo": "iris-sast/iris",
+          "desc": "Neurosymbolic SAST combining LLMs with CodeQL for Java vulnerability detection (MIT).",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "sast-skills",
+          "repo": "utkusen/sast-skills",
+          "desc": "Agent skills that turn AI coding assistants into a multi-agent SAST scanner.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "Fraim",
+              "url": "https://github.com/fraim-dev/fraim"
+            },
+            {
+              "label": "llm-sast-scanner",
+              "url": "https://github.com/SunWeb3Sec/llm-sast-scanner"
+            }
+          ]
+        },
+        {
+          "name": "llm-sast-scanner",
+          "repo": "SunWeb3Sec/llm-sast-scanner",
+          "desc": "SAST skill for AI coding agents with structured source-to-sink analysis across 34 vulnerability classes.",
+          "note": "*License: MIT stated in README.*",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "sast-skills",
+              "url": "https://github.com/utkusen/sast-skills"
+            }
+          ]
+        },
+        {
+          "name": "sast-ai-workflow",
+          "repo": "RHEcosystemAppEng/sast-ai-workflow",
+          "org": "Red Hat Ecosystem AppEng",
+          "desc": "LangGraph workflow for reviewing static-analysis findings, reducing false positives, and producing vulnerability review output.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "seclab-taskflow-agent",
+              "url": "https://github.com/GitHubSecurityLab/seclab-taskflow-agent"
+            },
+            {
+              "label": "Fraim",
+              "url": "https://github.com/fraim-dev/fraim"
+            }
+          ]
+        },
+        {
+          "name": "xvulnhuntr",
+          "repo": "CompassSecurity/xvulnhuntr",
+          "org": "Compass Security",
+          "desc": "Archived fork of Vulnhuntr extending support to C#, Java, and Go.",
+          "status": [
+            "open_source"
+          ],
+          "sources": [
+            {
+              "label": "Vulnhuntr",
+              "url": "https://github.com/protectai/vulnhuntr"
+            }
+          ],
+          "related": [
+            {
+              "label": "vulnhuntr-mod",
+              "url": "https://github.com/kxcode/vulnhuntr-mod"
+            }
+          ]
+        },
+        {
+          "name": "llm-security-scanner",
+          "repo": "iknowjason/llm-security-scanner",
+          "desc": "LLM-powered code scanner that opens GitHub issues for findings.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "vulnhuntr-mod",
+          "repo": "kxcode/vulnhuntr-mod",
+          "desc": "Modified Vulnhuntr with Qwen/Hunyuan support and Chinese-language prompts.",
+          "status": [
+            "open_source"
+          ],
+          "sources": [
+            {
+              "label": "Vulnhuntr",
+              "url": "https://github.com/protectai/vulnhuntr"
+            }
+          ],
+          "related": [
+            {
+              "label": "xvulnhuntr",
+              "url": "https://github.com/CompassSecurity/xvulnhuntr"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LLM-Driven Fuzzing",
+      "anchor": "llm-driven-fuzzing",
+      "intro": "Two families: (a) LLMs generating harnesses/targets for traditional fuzzing, and (b) fuzzing the LLM itself.",
+      "groups": [
+        {
+          "title": "Harness / target generation",
+          "entries": [
+            {
+              "name": "oss-fuzz-gen",
+              "repo": "google/oss-fuzz-gen",
+              "org": "Google",
+              "desc": "LLM-driven fuzz-harness generation for OSS-Fuzz; reported 26 real vulnerabilities (incl. CVE-2024-9143 in OpenSSL).",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "PromptFuzz",
+              "repo": "PromptFuzz/PromptFuzz",
+              "desc": "LLM-mutated prompts to generate fuzz drivers for C/C++ libraries (Rust).",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "Fuzz4All",
+              "repo": "fuzz4all/fuzz4all",
+              "desc": "\"Universal\" LLM-based fuzzer across compilers/languages (ICSE 2024).",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "ChatAFL",
+              "repo": "ChatAFLndss/ChatAFL",
+              "desc": "LLM-guided protocol fuzzing extending AFLNet (NDSS'24).",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "TitanFuzz",
+              "repo": "ise-uiuc/TitanFuzz",
+              "desc": "First LLM-based fuzzer for PyTorch/TensorFlow (ISSTA'23).",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Fuzzing the LLM",
+          "entries": [
+            {
+              "name": "LLMFuzzer",
+              "repo": "mnns/LLMFuzzer",
+              "desc": "First open-source fuzzing framework for LLM API integrations.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "ps-fuzz",
+              "repo": "prompt-security/ps-fuzz",
+              "org": "Prompt Security",
+              "desc": "System-prompt hardening fuzzer; 16 attacks × 16 providers.",
+              "status": [
+                "commercial_open"
+              ]
+            },
+            {
+              "name": "FuzzyAI",
+              "repo": "cyberark/FuzzyAI",
+              "org": "CyberArk",
+              "desc": "Automated LLM fuzzer for jailbreaks/prompt injection.",
+              "status": [
+                "commercial_open"
+              ]
+            },
+            {
+              "name": "spikee",
+              "repo": "ReversecLabs/spikee",
+              "org": "ReversecLabs / WithSecure",
+              "desc": "Prompt-injection evaluation and exploitation kit with dataset generation, Burp integration, and pluggable judges.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "promptmap",
+                  "url": "https://github.com/utkusen/promptmap"
+                }
+              ]
+            },
+            {
+              "name": "promptmap",
+              "repo": "utkusen/promptmap",
+              "desc": "Prompt-injection scanner for custom LLM applications in white-box and black-box modes; GPL-3.0 licensed.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ],
+              "related": [
+                {
+                  "label": "spikee",
+                  "url": "https://github.com/ReversecLabs/spikee"
+                }
+              ]
+            },
+            {
+              "name": "ai-prompt-fuzzer",
+              "repo": "PortSwigger/ai-prompt-fuzzer",
+              "org": "PortSwigger",
+              "desc": "Burp Suite extension fuzzing GenAI/LLM prompts.",
+              "status": [
+                "open_source"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Threat Intelligence",
+      "anchor": "threat-intelligence",
+      "intro": "AI/LLM tooling for CTI gathering, IOC/TTP extraction, and analysis.",
+      "entries": [
+        {
+          "name": "trs",
+          "repo": "deadbits/trs",
+          "desc": "LLM + ChromaDB tool to summarize threat reports and extract MITRE TTPs and IOCs.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "TI-Mindmap-GPT",
+          "repo": "format81/TI-Mindmap-GPT",
+          "desc": "Streamlit app: AI summaries, mindmaps, IOC/TTP extraction, and ATT&CK Navigator layers.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "aiocrioc",
+          "repo": "referefref/aiocrioc",
+          "desc": "LLM + OCR IOC extraction (pulls IOCs from images/PDFs).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "ThreatIngestor",
+          "repo": "InQuest/ThreatIngestor",
+          "desc": "Extracts/aggregates IOCs from feeds; integrates with MISP/ThreatKB (pairs well with LLM post-processing).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "IATelligence",
+          "repo": "fr0gger/IATelligence",
+          "desc": "Explains imported Windows APIs in PE files via GPT and maps to MITRE ATT&CK.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "MCP_Security",
+              "url": "https://github.com/fr0gger/MCP_Security"
+            }
+          ]
+        },
+        {
+          "name": "MCP_Security",
+          "repo": "fr0gger/MCP_Security",
+          "desc": "MCP server (ORKL) for querying the ORKL threat-intel API.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "IATelligence",
+              "url": "https://github.com/fr0gger/IATelligence"
+            }
+          ]
+        },
+        {
+          "name": "threat-intelligence-cti-analysis",
+          "repo": "AnandBinuArjun/threat-intelligence-cti-analysis",
+          "desc": "NLP/LLM pipeline for IOC extraction, MITRE ATT&CK mapping, and knowledge-graph generation from unstructured CTI.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "soctalk",
+              "url": "https://github.com/soctalk/soctalk"
+            }
+          ]
+        },
+        {
+          "kind": "hf_model",
+          "name": "CTI-BERT",
+          "model": "ibm-research/CTI-BERT",
+          "org": "IBM Research",
+          "desc": "BERT model pretrained from scratch on a large cybersecurity text corpus for downstream CTI extraction, classification, and question-answering tasks.",
+          "license": "Apache-2.0",
+          "access": "open",
+          "artifacts": "PyTorch",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Log Analysis / SIEM / SOC Triage",
+      "anchor": "log-analysis--siem--soc-triage",
+      "intro": "AI agents for SOC alert triage, investigation, and incident response.",
+      "entries": [
+        {
+          "name": "AI-SOC-Agent",
+          "repo": "M507/ai-soc-agent",
+          "desc": "Black Hat 2025 MCP server exposing security-investigation tools (ELK, IRIS).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "soctalk",
+          "repo": "soctalk/soctalk",
+          "desc": "LangGraph SOC automation agent with MCP integrations for Wazuh, Cortex, TheHive, and MISP plus mock-agent test lab.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "SigmaOptimizer",
+              "url": "https://github.com/YusukeJustinNakajima/SigmaOptimizer"
+            }
+          ]
+        },
+        {
+          "name": "Vigil SOC",
+          "repo": "Vigil-SOC/vigil",
+          "org": "Vigil SOC",
+          "desc": "Open-source AI SOC with readable Python agents, Markdown playbooks, and MCP integrations for triage, investigation, hunting, response, reporting, and forensics.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "soctalk",
+              "url": "https://github.com/soctalk/soctalk"
+            }
+          ]
+        },
+        {
+          "name": "agentic-soc-platform",
+          "repo": "FunnyWolf/agentic-soc-platform",
+          "desc": "Agentic SOC platform (LangGraph/Dify) with local-LLM support.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "SigmAIQ",
+          "repo": "AttackIQ/SigmAIQ",
+          "org": "AttackIQ",
+          "desc": "pySigma wrapper and LangChain toolkit for automatic Sigma rule creation and translation; LGPL-2.1 licensed.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "SigmaOptimizer",
+              "url": "https://github.com/YusukeJustinNakajima/SigmaOptimizer"
+            }
+          ]
+        },
+        {
+          "name": "SOCGPT",
+          "repo": "Ninadjos/SOCGPT-AI-Powered-SOC-Assistant",
+          "desc": "LLM log summarization, severity triage, MITRE mapping, and Q&A.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "AttackGen",
+          "repo": "mrwadams/attackgen",
+          "desc": "LLM-driven incident-response scenario generator using MITRE ATT&CK + ATLAS.",
+          "status": [
+            "open_source"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Reverse Engineering",
+      "anchor": "reverse-engineering",
+      "intro": "LLM-assisted binary analysis and traffic inspection.",
+      "entries": [
+        {
+          "name": "Gepetto",
+          "repo": "JusticeRage/Gepetto",
+          "desc": "IDA Pro plugin: GPT adds comments and meaningful variable names.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "ida-pro-mcp",
+          "repo": "mrexodia/ida-pro-mcp",
+          "desc": "MCP bridge for IDA Pro exposing decompile, disassemble, xref, rename, and debugging workflows to LLM clients.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "GhidraMCP",
+          "repo": "LaurieWired/GhidraMCP",
+          "desc": "MCP server exposing Ghidra reverse-engineering ops to any MCP-capable LLM.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "GhidrOllama",
+              "url": "https://github.com/lr-m/GhidrOllama"
+            },
+            {
+              "label": "OGhidra",
+              "url": "https://github.com/llnl/OGhidra"
+            }
+          ]
+        },
+        {
+          "name": "ReVa",
+          "repo": "cyberkaida/reverse-engineering-assistant",
+          "desc": "Ghidra-focused reverse-engineering assistant with MCP support, Claude Skills integration, and long-form analysis workflows.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "GhidraMCP",
+              "url": "https://github.com/LaurieWired/GhidraMCP"
+            },
+            {
+              "label": "GhidrAssistMCP",
+              "url": "https://github.com/symgraph/GhidrAssistMCP"
+            }
+          ]
+        },
+        {
+          "name": "GhidrAssistMCP",
+          "repo": "symgraph/GhidrAssistMCP",
+          "desc": "Native Ghidra MCP extension with broad tool coverage, headless support, and security-sensitive tool gating.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "ReVa",
+              "url": "https://github.com/cyberkaida/reverse-engineering-assistant"
+            },
+            {
+              "label": "ghidra-mcp",
+              "url": "https://github.com/bethington/ghidra-mcp"
+            }
+          ]
+        },
+        {
+          "name": "ghidra-mcp",
+          "repo": "bethington/ghidra-mcp",
+          "desc": "Ghidra MCP server with large tool coverage, GUI plugin, headless server, and lazy tool loading.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "GhidrAssistMCP",
+              "url": "https://github.com/symgraph/GhidrAssistMCP"
+            }
+          ]
+        },
+        {
+          "name": "GhidrOllama",
+          "repo": "lr-m/GhidrOllama",
+          "desc": "Ghidra script using the Ollama API for function analysis/renaming.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "OGhidra",
+              "url": "https://github.com/llnl/OGhidra"
+            },
+            {
+              "label": "GhidraMCP",
+              "url": "https://github.com/LaurieWired/GhidraMCP"
+            }
+          ]
+        },
+        {
+          "name": "GhidraGPT",
+          "repo": "weirdmachine64/GhidraGPT",
+          "desc": "Ghidra plugin that integrates LLMs for automated code refactoring and analysis.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "GhidraMCP",
+              "url": "https://github.com/LaurieWired/GhidraMCP"
+            },
+            {
+              "label": "ReVa",
+              "url": "https://github.com/cyberkaida/reverse-engineering-assistant"
+            }
+          ]
+        },
+        {
+          "name": "LLM4Decompile",
+          "repo": "albertan017/LLM4Decompile",
+          "desc": "Research project for binary-to-C decompilation with LLMs; code is MIT, but model weights use a more restrictive license.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "x64dbg_mcp",
+          "repo": "bromoket/x64dbg_mcp",
+          "desc": "MCP server exposing x64dbg debugging and reverse-engineering operations to AI clients.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "binaryninja-mcp",
+          "repo": "MCPPhalanx/binaryninja-mcp",
+          "desc": "MCP server for Binary Ninja-assisted reverse engineering.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "OGhidra",
+          "repo": "llnl/OGhidra",
+          "org": "Lawrence Livermore National Lab",
+          "desc": "Natural-language Ghidra analysis via Ollama.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "GhidrOllama",
+              "url": "https://github.com/lr-m/GhidrOllama"
+            },
+            {
+              "label": "GhidraMCP",
+              "url": "https://github.com/LaurieWired/GhidraMCP"
+            }
+          ]
+        },
+        {
+          "name": "ghidra_tools (G-3PO)",
+          "repo": "tenable/ghidra_tools",
+          "org": "Tenable",
+          "desc": "Ghidra plugin for AI-assisted decompiled-code analysis.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "gpt-wpre",
+          "repo": "moyix/gpt-wpre",
+          "desc": "Whole-program reverse engineering with GPT-3.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "burpgpt",
+          "repo": "aress31/burpgpt",
+          "desc": "Burp Suite extension integrating GPT for passive scanning.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "Burp-extension-for-GPT",
+              "url": "https://github.com/tenable/Burp-extension-for-GPT"
+            }
+          ]
+        },
+        {
+          "name": "Burp-extension-for-GPT",
+          "repo": "tenable/Burp-extension-for-GPT",
+          "org": "Tenable",
+          "desc": "Burp extension to analyze HTTP traffic with GPT.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "burpgpt",
+              "url": "https://github.com/aress31/burpgpt"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LLM Red-Teaming & Guardrails",
+      "anchor": "llm-red-teaming--guardrails",
+      "intro": "Tools for attacking and defending LLM applications themselves.",
+      "groups": [
+        {
+          "title": "Scanners, Evals & Guardrails",
+          "entries": [
+            {
+              "name": "garak",
+              "repo": "NVIDIA/garak",
+              "org": "NVIDIA",
+              "desc": "The LLM vulnerability scanner — probes for prompt injection, jailbreaks, data leakage, and more.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "PyRIT",
+                  "url": "https://github.com/microsoft/PyRIT"
+                },
+                {
+                  "label": "promptfoo",
+                  "url": "https://github.com/promptfoo/promptfoo"
+                }
+              ]
+            },
+            {
+              "name": "PyRIT",
+              "repo": "microsoft/PyRIT",
+              "org": "Microsoft",
+              "desc": "Python Risk Identification Tool; battle-tested across 100+ GenAI red-team operations.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "promptfoo",
+              "repo": "promptfoo/promptfoo",
+              "desc": "LLM eval + red-teaming/pentesting CLI with 50+ attack plugins (MIT).",
+              "note": "*Note: OpenAI announced an acquisition agreement in March 2026; remains MIT-licensed — track governance.*",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "Augustus",
+              "repo": "praetorian-inc/augustus",
+              "org": "Praetorian",
+              "desc": "Single-binary LLM security testing framework for prompt injection, jailbreaks, and adversarial attacks across many providers.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "garak",
+                  "url": "https://github.com/NVIDIA/garak"
+                },
+                {
+                  "label": "PyRIT",
+                  "url": "https://github.com/microsoft/PyRIT"
+                }
+              ]
+            },
+            {
+              "name": "agentic_security",
+              "repo": "msoedov/agentic_security",
+              "desc": "Agentic LLM vulnerability scanner and AI red-team kit for jailbreaks, prompt injection, fuzzing, and API stress testing.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "garak",
+                  "url": "https://github.com/NVIDIA/garak"
+                },
+                {
+                  "label": "spikee",
+                  "url": "https://github.com/ReversecLabs/spikee"
+                }
+              ]
+            },
+            {
+              "name": "HackAgent",
+              "repo": "AISecurityLab/hackagent",
+              "desc": "Python SDK and CLI for red-teaming AI agents with research-backed attacks such as AdvPrefix, AutoDAN-Turbo, PAIR, TAP, FlipAttack, BoN, and static templates across agent frameworks.",
+              "note": "— **note:** works locally without an API key; optional cloud reporting is available.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "PyRIT",
+                  "url": "https://github.com/microsoft/PyRIT"
+                },
+                {
+                  "label": "garak",
+                  "url": "https://github.com/NVIDIA/garak"
+                },
+                {
+                  "label": "agentic_security",
+                  "url": "https://github.com/msoedov/agentic_security"
+                }
+              ]
+            },
+            {
+              "name": "HiveTrace Red",
+              "repo": "HiveTrace/HiveTraceRed",
+              "desc": "Early-stage LLM red-teaming framework with 80+ attack templates, async evaluation pipelines, WildGuard evaluators, multi-provider support, and HTML reporting.",
+              "note": "— **note:** young project with limited independent adoption signal.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "garak",
+                  "url": "https://github.com/NVIDIA/garak"
+                },
+                {
+                  "label": "PyRIT",
+                  "url": "https://github.com/microsoft/PyRIT"
+                },
+                {
+                  "label": "promptfoo",
+                  "url": "https://github.com/promptfoo/promptfoo"
+                }
+              ]
+            },
+            {
+              "name": "DeepTeam",
+              "repo": "confident-ai/deepteam",
+              "desc": "Open-source framework for red-teaming LLMs and LLM systems across jailbreaks, prompt injection, data leakage, and safety risks.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "Moonshot",
+              "repo": "aiverify-foundation/moonshot",
+              "org": "AI Verify Foundation",
+              "desc": "Modular tool for benchmarking, red-teaming, and evaluating LLM applications with custom connectors and recipes.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "Guardrails AI",
+              "repo": "guardrails-ai/guardrails",
+              "org": "Guardrails AI",
+              "desc": "Python framework for adding input/output guards, validators, structured-output controls, and Guardrails Hub checks to LLM applications.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "NeMo Guardrails",
+                  "url": "https://github.com/NVIDIA-NeMo/Guardrails"
+                },
+                {
+                  "label": "LLM Guard",
+                  "url": "https://github.com/protectai/llm-guard"
+                }
+              ]
+            },
+            {
+              "name": "Giskard",
+              "repo": "Giskard-AI/giskard-oss",
+              "org": "Giskard AI",
+              "desc": "Open-source evaluation, testing, and red-teaming framework for LLM agents, including agent vulnerability scanning and RAG evaluation workflows.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Moonshot",
+                  "url": "https://github.com/aiverify-foundation/moonshot"
+                },
+                {
+                  "label": "promptfoo",
+                  "url": "https://github.com/promptfoo/promptfoo"
+                }
+              ]
+            },
+            {
+              "name": "LangKit",
+              "repo": "whylabs/langkit",
+              "org": "WhyLabs",
+              "desc": "LLM monitoring toolkit extracting safety/security signals such as jailbreak similarity, prompt-injection similarity, hallucination checks, PII patterns, toxicity, and refusal metrics.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "LLM Guard",
+              "repo": "protectai/llm-guard",
+              "org": "Protect AI",
+              "desc": "Suite of input/output scanners (PII, prompt injection, etc.).",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "Rebuff",
+                  "url": "https://github.com/protectai/rebuff"
+                }
+              ]
+            },
+            {
+              "name": "Rebuff",
+              "repo": "protectai/rebuff",
+              "org": "Protect AI",
+              "desc": "Archived prompt-injection detector (heuristics + LLM + vector DB + canary tokens).",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "LLM Guard",
+                  "url": "https://github.com/protectai/llm-guard"
+                }
+              ]
+            },
+            {
+              "name": "NeMo Guardrails",
+              "repo": "NVIDIA-NeMo/Guardrails",
+              "org": "NVIDIA",
+              "desc": "Programmable guardrails (input/output/dialog/retrieval rails) for LLM apps.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "PurpleLlama",
+              "repo": "meta-llama/PurpleLlama",
+              "org": "Meta",
+              "desc": "Llama Guard classifiers, CodeShield, and CyberSecEval.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "LLAMATOR",
+              "repo": "LLAMATOR-Core/llamator",
+              "desc": "Red-teaming framework for chatbots and GenAI systems; CC BY-NC-SA 4.0 licensed.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "Vigil",
+              "repo": "deadbits/vigil-llm",
+              "desc": "Library/REST API to scan prompts and responses for prompt injection.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "Counterfit",
+              "repo": "Azure/counterfit",
+              "org": "Microsoft",
+              "desc": "ML/AI penetration-testing automation tool.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "AI-Red-Teaming-Playground-Labs",
+              "repo": "microsoft/AI-Red-Teaming-Playground-Labs",
+              "org": "Microsoft",
+              "desc": "CTFd-based AI red-team training challenges.",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "name": "EasyJailbreak",
+              "repo": "EasyJailbreak/EasyJailbreak",
+              "desc": "Framework for building and testing adversarial jailbreak prompts.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "TextAttack",
+              "repo": "QData/TextAttack",
+              "desc": "Python framework for adversarial attacks, data augmentation, and training for NLP models; useful for robustness testing beyond chat-only LLM scanners.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "GPTFuzz",
+              "repo": "sherdencooper/GPTFuzz",
+              "desc": "Research framework for red-teaming LLMs with auto-generated jailbreak prompts.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "HarmBench",
+              "repo": "centerforaisafety/HarmBench",
+              "org": "Center for AI Safety",
+              "desc": "ICML 2024 standardized evaluation framework for automated red-teaming and robust-refusal benchmarking.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "JailbreakBench",
+                  "url": "https://github.com/JailbreakBench/jailbreakbench"
+                }
+              ]
+            },
+            {
+              "name": "llm-attacks (GCG)",
+              "repo": "llm-attacks/llm-attacks",
+              "desc": "Canonical Greedy Coordinate Gradient adversarial-suffix attack implementation for transferable attacks on aligned language models.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "nanoGCG",
+                  "url": "https://github.com/GraySwanAI/nanoGCG"
+                }
+              ]
+            },
+            {
+              "name": "nanoGCG",
+              "repo": "GraySwanAI/nanoGCG",
+              "desc": "Fast, lightweight PyTorch implementation of the GCG adversarial-suffix algorithm.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "llm-attacks (GCG)",
+                  "url": "https://github.com/llm-attacks/llm-attacks"
+                }
+              ]
+            },
+            {
+              "name": "JailbreakBench",
+              "repo": "JailbreakBench/jailbreakbench",
+              "desc": "NeurIPS 2024 open robustness benchmark and leaderboard for generating and defending against LLM jailbreaks.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "Open-Prompt-Injection",
+              "repo": "liu00222/Open-Prompt-Injection",
+              "desc": "Open-source toolkit and benchmark for implementing and evaluating prompt-injection attacks, defenses, and LLM-integrated applications.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "PINT Benchmark",
+              "repo": "lakeraai/pint-benchmark",
+              "org": "Lakera",
+              "desc": "Prompt-injection test benchmark for evaluating detectors and guardrails across multilingual prompt injection, jailbreak, benign, and hard-negative inputs.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "Open-Prompt-Injection",
+                  "url": "https://github.com/liu00222/Open-Prompt-Injection"
+                },
+                {
+                  "label": "Prompt Guard 86M",
+                  "url": "https://huggingface.co/meta-llama/Prompt-Guard-86M"
+                }
+              ]
+            },
+            {
+              "name": "PIArena",
+              "repo": "sleeepeer/PIArena",
+              "desc": "ACL 2026 toolbox and benchmark for prompt-injection attacks and defenses, with ready-to-use attacks/defenses, evaluation pipelines, agent benchmarks, a Hugging Face dataset, and leaderboard.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "PINT Benchmark",
+                  "url": "https://github.com/lakeraai/pint-benchmark"
+                },
+                {
+                  "label": "Open-Prompt-Injection",
+                  "url": "https://github.com/liu00222/Open-Prompt-Injection"
+                }
+              ]
+            },
+            {
+              "name": "Whistleblower",
+              "repo": "Repello-AI/whistleblower",
+              "org": "Repello AI",
+              "desc": "Offensive testing tool for inferring system prompts and discovering capabilities of LLM applications exposed through APIs.",
+              "note": "— **note:** no LICENSE file found.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "LLMmap",
+              "repo": "pasquini-dario/LLMmap",
+              "desc": "Minimal-query fingerprinting tool for identifying LLMs from behavioral traces, with a pretrained open-set inference model.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "llm-security",
+              "repo": "greshake/llm-security",
+              "desc": "Original PoC for indirect prompt-injection attacks.",
+              "status": [
+                "research"
+              ]
+            },
+            {
+              "name": "JailbreakLLMs",
+              "repo": "TrustAIRLab/JailbreakLLMs",
+              "desc": "Research dataset of 6,387 ChatGPT prompts, including in-the-wild jailbreak prompts from Reddit, Discord, websites, and open datasets.",
+              "status": [
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "name": "Do-Not-Answer",
+              "repo": "Libr-AI/do-not-answer",
+              "desc": "Dataset for evaluating LLM safeguards on unsafe or policy-sensitive prompts.",
+              "status": [
+                "open_source",
+                "research"
+              ]
+            },
+            {
+              "name": "prompt-injection-defenses",
+              "repo": "tldrsec/prompt-injection-defenses",
+              "desc": "Curated catalog of practical defenses against prompt injection.",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Prompt-Injection Classifier Models",
+          "entries": [
+            {
+              "kind": "hf_model",
+              "name": "Wolf Defender Prompt Injection",
+              "model": "patronus-studio/wolf-defender-prompt-injection",
+              "org": "Patronus Studio / Casdo Labs",
+              "desc": "Hugging Face text-classification model for prompt-injection detection in agents, chatbots, and CI workflows.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "Safetensors, ONNX",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "DeBERTa v3 Prompt Injection v2",
+              "model": "protectai/deberta-v3-base-prompt-injection-v2",
+              "org": "Protect AI",
+              "desc": "Apache-licensed prompt-injection classifier usable via Transformers pipelines and ONNX.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "Safetensors, ONNX",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "PromptGuard",
+              "model": "codeintegrity-ai/promptguard",
+              "org": "CodeIntegrity AI",
+              "desc": "ModernBERT-based prompt-injection and jailbreak classifier.",
+              "license": "Apache-2.0",
+              "access": "gated auto",
+              "artifacts": "Safetensors",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "Prompt Guard 86M",
+              "model": "meta-llama/Prompt-Guard-86M",
+              "org": "Meta",
+              "desc": "Meta prompt-injection and jailbreak classifier from the Llama Guard family.",
+              "license": "Llama 3.1",
+              "access": "gated manual",
+              "artifacts": "Safetensors",
+              "status": [
+                "commercial_open"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "prompt-injection-sentinel",
+              "model": "qualifire/prompt-injection-sentinel",
+              "org": "Qualifire",
+              "desc": "ModernBERT-large classifier for prompt-injection and jailbreak detection.",
+              "license": "other",
+              "access": "gated auto",
+              "artifacts": "Safetensors",
+              "status": [
+                "research"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Specialty Security LLMs",
+          "entries": [
+            {
+              "name": "SecGPT",
+              "repo": "Clouditera/SecGPT",
+              "org": "Clouditera",
+              "desc": "Open cybersecurity-tuned LLM family for vulnerability analysis, log/traffic investigation, anomaly detection, attack/defense reasoning, command analysis, and security Q&A.",
+              "status": [
+                "open_source"
+              ],
+              "related": [
+                {
+                  "label": "SecGPT model",
+                  "url": "https://huggingface.co/clouditera/secgpt"
+                }
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "Trendyol Cybersecurity LLM v2 70B",
+              "model": "Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M",
+              "org": "Trendyol Group Security Team",
+              "desc": "Defense-focused cybersecurity LLM based on Llama-3.3-70B, trained on an alignment-safe security instruction dataset for SOC, cloud, AppSec, detection, and vulnerability-management workflows.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "GGUF",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "heavy_runtime"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "WhiteRabbitNeo 2.5 Qwen Coder 7B",
+              "model": "WhiteRabbitNeo/WhiteRabbitNeo-2.5-Qwen-2.5-Coder-7B",
+              "org": "WhiteRabbitNeo",
+              "desc": "Cybersecurity-oriented Qwen2.5-Coder fine-tune positioned for offensive and defensive security assistance.",
+              "license": "Apache-2.0 + WhiteRabbitNeo restrictions",
+              "access": "open",
+              "artifacts": "Safetensors",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat",
+                "authorized_testing_only"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "Lily-Cybersecurity-7B-v0.2",
+              "model": "segolilylabs/Lily-Cybersecurity-7B-v0.2",
+              "org": "Segolily Labs",
+              "desc": "Mistral-7B-Instruct fine-tune for cybersecurity assistance, trained on hand-crafted security and hacking-related instruction pairs.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "Safetensors",
+              "status": [
+                "open_source"
+              ]
+            },
+            {
+              "kind": "hf_model",
+              "name": "RavenX CyberAgent 35B Q4_K_M",
+              "model": "deadbydawn101/RavenX-CyberAgent-Qwen3.6-35B-A3B-Opus-4.7-OpenMythos-Pentester-BugHunter-RATH-GGUF",
+              "org": "RavenX LLC / DeadByDawn101",
+              "desc": "GGUF security-specialized text-generation model positioned for pentest, bug-bounty, tool-calling, MCP, CVSS/CWE, and MITRE ATT&CK workflows.",
+              "note": "— **note:** built from an abliterated base model and marketed for autonomous security assessment; use only in authorized, sandboxed agent harnesses with tool-call validation.",
+              "license": "Apache-2.0",
+              "access": "open",
+              "artifacts": "GGUF",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "heavy_runtime",
+                "authorized_testing_only",
+                "abliterated_or_uncensored"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "LLM Honeypots & Deception",
+      "anchor": "llm-honeypots--deception",
+      "intro": "Honeypots and deception that use LLMs to simulate convincing systems.",
+      "entries": [
+        {
+          "name": "Beelzebub",
+          "repo": "mariocandela/beelzebub",
+          "desc": "Low-code honeypot using LLMs to simulate SSH/HTTP/MCP services (Go).",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "DECEIVE",
+          "repo": "splunk/DECEIVE",
+          "org": "Splunk",
+          "desc": "Proof-of-concept LLM-powered SSH honeypot that evaluates sessions as benign, suspicious, or malicious.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "TRAP",
+          "repo": "parameterlab/trap",
+          "desc": "Research code for Targeted Random Adversarial Prompt honeypots that identify black-box LLM usage through model-specific prompt suffixes (ACL 2024 Findings).",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "shelLM",
+          "repo": "stratosphereips/shelLM",
+          "desc": "LLM-powered SSH honeypot (paper *\"LLM in the Shell\"*).",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "VelLMes",
+              "url": "https://github.com/stratosphereips/VelLMes-AI-Honeypot"
+            }
+          ]
+        },
+        {
+          "name": "VelLMes",
+          "repo": "stratosphereips/VelLMes-AI-Honeypot",
+          "desc": "Multi-protocol LLM honeypot framework (successor to shelLM).",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "shelLM",
+              "url": "https://github.com/stratosphereips/shelLM"
+            }
+          ]
+        },
+        {
+          "name": "llm-honeypot",
+          "repo": "PalisadeResearch/llm-honeypot",
+          "org": "Palisade Research",
+          "desc": "Cowrie SSH honeypot extended with prompt-injection traps to detect LLM hacker agents.",
+          "status": [
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "CTF / Exploit / Bug-Bounty Agents & Benchmarks",
+      "anchor": "ctf--exploit--bug-bounty-agents--benchmarks",
+      "intro": "Offensive agents and the benchmarks used to evaluate them.",
+      "entries": [
+        {
+          "name": "SWE-agent (EnIGMA)",
+          "repo": "SWE-agent/SWE-agent",
+          "desc": "EnIGMA offensive-CTF mode; SOTA on NYU CTF, InterCode-CTF, and Cybench (v0.7 branch).",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "Cybench",
+              "url": "https://github.com/andyzorigin/cybench"
+            },
+            {
+              "label": "NYU CTF Bench",
+              "url": "https://github.com/NYU-LLM-CTF/NYU_CTF_Bench"
+            },
+            {
+              "label": "InterCode",
+              "url": "https://github.com/princeton-nlp/intercode"
+            }
+          ]
+        },
+        {
+          "name": "Cybench",
+          "repo": "andyzorigin/cybench",
+          "desc": "40 professional CTF tasks across 4 competitions; widely used by AI safety institutes.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "NYU CTF Bench",
+          "repo": "NYU-LLM-CTF/NYU_CTF_Bench",
+          "desc": "Dockerized CSAW CTF challenges for LLM-agent evaluation.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "CTFTiny",
+          "repo": "NYU-LLM-CTF/CTFTiny",
+          "desc": "Lightweight CTF benchmark from the NYU LLM CTF group; GPL-2.0 licensed.",
+          "status": [
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "NYU CTF Bench",
+              "url": "https://github.com/NYU-LLM-CTF/NYU_CTF_Bench"
+            }
+          ]
+        },
+        {
+          "name": "InterCode",
+          "repo": "princeton-nlp/intercode",
+          "desc": "Interactive-coding benchmark incl. InterCode-CTF.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "inspect_evals",
+          "repo": "UKGovernmentBEIS/inspect_evals",
+          "org": "UK AI Security Institute",
+          "desc": "Maintained Inspect AI evaluation suite containing multiple cyber benchmarks and tasks.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "BountyBench",
+          "repo": "bountybench/bountybench",
+          "desc": "25 real systems / 40 bug bounties for Detect-Exploit-Patch evaluation.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "Cyber-Zero",
+          "repo": "amazon-science/Cyber-Zero",
+          "org": "Amazon Science",
+          "desc": "Trains cybersecurity agents without runtime; ships an EnIGMA+ scaffold.",
+          "status": [
+            "research"
+          ],
+          "sources": [
+            {
+              "label": "SWE-agent",
+              "url": "https://github.com/SWE-agent/SWE-agent"
+            }
+          ],
+          "related": [
+            {
+              "label": "SWE-agent",
+              "url": "https://github.com/SWE-agent/SWE-agent"
+            }
+          ]
+        },
+        {
+          "name": "ExploitBench",
+          "repo": "exploitbench/exploitbench",
+          "desc": "Measures AI-agent progress on V8/Chromium exploit ladders.",
+          "status": [
+            "research"
+          ]
+        },
+        {
+          "name": "AI Goat",
+          "repo": "dhammon/ai-goat",
+          "desc": "Vulnerable-by-design local LLM CTF for learning prompt injection, insecure output handling, data leakage, excessive agency, and related LLM app risks.",
+          "note": "— **note:** GPL-2.0 licensed.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "Damn Vulnerable LLM Agent",
+          "repo": "ReversecLabs/damn-vulnerable-llm-agent",
+          "org": "ReversecLabs / WithSecure",
+          "desc": "Deliberately vulnerable LangChain ReAct agent for practicing prompt-injection and Thought/Action/Observation injection attacks.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "related": [
+            {
+              "label": "spikee",
+              "url": "https://github.com/ReversecLabs/spikee"
+            }
+          ]
+        },
+        {
+          "name": "claude-bug-bounty",
+          "repo": "shuvonsec/claude-bug-bounty",
+          "desc": "Claude Code plugin orchestrating recon → vuln classes → reporting.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "Bug-Bounty-Agents",
+          "repo": "matty69v/Bug-Bounty-Agents",
+          "desc": "43 AI agent personas for Claude Code / Copilot / Cursor across the bug-bounty lifecycle.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "ai-exploits",
+          "repo": "protectai/ai-exploits",
+          "org": "Protect AI",
+          "desc": "Real-world AI/ML exploits (Metasploit modules + Nuclei templates) for MLflow, Ray, H2O.",
+          "status": [
+            "open_source"
+          ]
+        }
+      ]
+    },
+    {
+      "title": "Cloud / IaC / DFIR / OSINT / Phishing",
+      "anchor": "cloud--iac--dfir--osint--phishing",
+      "intro": "AI tooling for cloud/IaC security, digital forensics, OSINT, and phishing detection.",
+      "entries": [
+        {
+          "name": "EscalateGPT",
+          "repo": "tenable/EscalateGPT",
+          "org": "Tenable",
+          "desc": "GPT-based discovery of privilege-escalation paths in AWS IAM policies.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "MemoryInvestigator",
+          "repo": "jan-hendrik-lang/MemoryInvestigator",
+          "desc": "Volatility 3 + LLM + RAG for memory-forensic triage.",
+          "status": [
+            "research"
+          ],
+          "related": [
+            {
+              "label": "Volatility-MCP-Server",
+              "url": "https://github.com/bornpresident/Volatility-MCP-Server"
+            }
+          ]
+        },
+        {
+          "name": "Volatility-MCP-Server",
+          "repo": "bornpresident/Volatility-MCP-Server",
+          "desc": "MCP exposing Volatility 3 plugins for natural-language memory forensics.",
+          "status": [
+            "open_source"
+          ],
+          "related": [
+            {
+              "label": "MemoryInvestigator",
+              "url": "https://github.com/jan-hendrik-lang/MemoryInvestigator"
+            }
+          ]
+        },
+        {
+          "name": "llm_osint",
+          "repo": "sshh12/llm_osint",
+          "desc": "Proof-of-concept LLM OSINT framework using knowledge and web agents for internet research workflows.",
+          "status": [
+            "open_source",
+            "research"
+          ]
+        },
+        {
+          "name": "ai_osint",
+          "repo": "7WaySecurity/ai_osint",
+          "desc": "Curated AI-OSINT dorks, queries, and techniques for discovering exposed LLM and AI infrastructure.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "PhishLLM",
+          "repo": "code-philia/PhishLLM",
+          "desc": "Reference-less phishing detection via LLM brand recognition (USENIX'24).",
+          "status": [
+            "research"
+          ],
+          "flags": [
+            "license_caveat"
+          ],
+          "related": [
+            {
+              "label": "PhishVLM",
+              "url": "https://github.com/code-philia/PhishVLM"
+            }
+          ]
+        },
+        {
+          "name": "mcp-dnstwist",
+          "repo": "BurtTheCoder/mcp-dnstwist",
+          "desc": "MCP server for dnstwist DNS fuzzing to support typosquatting, phishing, and lookalike-domain analysis.",
+          "status": [
+            "open_source"
+          ]
+        },
+        {
+          "name": "osintgpt",
+          "repo": "estebanpdl/osintgpt",
+          "desc": "OpenAI embeddings + Qdrant over OSINT corpora.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "license_caveat"
+          ]
+        },
+        {
+          "name": "gpt-osint",
+          "repo": "gigz/gpt-osint",
+          "desc": "Web-based GPT-4 OSINT tool over social-media dumps and CSVs.",
+          "status": [
+            "open_source"
+          ]
+        }
+      ]
+    }
+  ],
+  "awesome": [
+    {
+      "name": "awesome-llm-cybersecurity-tools",
+      "repo": "tenable/awesome-llm-cybersecurity-tools",
+      "desc": "Tenable's list (archived but a strong reference)."
+    },
+    {
+      "name": "Awesome-LLM4Cybersecurity",
+      "repo": "tmylla/Awesome-LLM4Cybersecurity",
+      "desc": "600+ papers on LLMs for cybersecurity."
+    },
+    {
+      "name": "awesome-ai-cybersecurity",
+      "repo": "ElNiak/awesome-ai-cybersecurity",
+      "desc": "Broad AI-for-security collection."
+    },
+    {
+      "name": "awesome-genai-cyberhub",
+      "repo": "Ashfaaq98/awesome-genai-cyberhub",
+      "desc": "GenAI-driven cybersecurity resources."
+    },
+    {
+      "name": "awesome-ai-security",
+      "repo": "gmh5225/awesome-ai-security",
+      "desc": "For pentesters, bug hunters, and researchers."
+    },
+    {
+      "name": "awesome-ai-security",
+      "repo": "ottosulin/awesome-ai-security",
+      "desc": "AI security resources."
+    },
+    {
+      "name": "Awesome-AI-Security",
+      "repo": "TalEliyahu/Awesome-AI-Security",
+      "desc": "AI security resources."
+    },
+    {
+      "name": "Awesome-AI-For-Security",
+      "repo": "AmanPriyanshu/Awesome-AI-For-Security",
+      "desc": "AI-for-security tools, papers, and datasets."
+    },
+    {
+      "name": "awesome-cybersecurity-agentic-ai",
+      "repo": "raphabot/awesome-cybersecurity-agentic-ai",
+      "desc": "Agentic-AI cybersecurity tools and security MCP servers."
+    },
+    {
+      "name": "open-source-llm-scanners",
+      "repo": "psiinon/open-source-llm-scanners",
+      "desc": "Open-source LLM scanners and testing tools."
+    },
+    {
+      "name": "awesome-mcp-security",
+      "repo": "Puliczek/awesome-mcp-security",
+      "desc": "MCP security resources, tools, writeups, and server/client risk references."
+    },
+    {
+      "name": "awesome-ml-security",
+      "repo": "trailofbits/awesome-ml-security",
+      "desc": "Trail of Bits' curated machine-learning security resources."
+    },
+    {
+      "name": "awesome-ml-privacy-attacks",
+      "repo": "stratosphereips/awesome-ml-privacy-attacks",
+      "desc": "Machine-learning privacy-attack papers and resources."
+    },
+    {
+      "name": "awesome-ml-for-cybersecurity",
+      "repo": "jivoi/awesome-ml-for-cybersecurity",
+      "desc": "Large classic list of machine-learning-for-cybersecurity resources (stale-ish but still useful)."
+    },
+    {
+      "name": "Awesome-AI4DevSecOps",
+      "repo": "awsm-research/Awesome-AI4DevSecOps",
+      "desc": "Taxonomy of AI-driven security solutions for DevSecOps."
+    },
+    {
+      "name": "awesome-llm-security",
+      "repo": "corca-ai/awesome-llm-security",
+      "desc": "Securing LLMs."
+    },
+    {
+      "name": "awesome-security-for-ai",
+      "repo": "zmre/awesome-security-for-ai",
+      "desc": "Products for securing AI systems."
+    },
+    {
+      "name": "awesome-gpt-security",
+      "repo": "cckuailong/awesome-gpt-security",
+      "desc": "GPT/LLM security tools and cases."
+    },
+    {
+      "name": "awesome-threat-intelligence",
+      "repo": "hslatman/awesome-threat-intelligence",
+      "desc": "Classic CTI list (pairs with the AI-CTI section)."
+    }
+  ]
+}

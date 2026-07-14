@@ -1,0 +1,232 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/scadastrangelove/awesome-ai-security-tools/data/schema.json",
+  "title": "Awesome AI Security Tools data",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["sections", "awesome"],
+  "properties": {
+    "$schema": {
+      "type": "string"
+    },
+    "sections": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "$ref": "#/$defs/section"
+      }
+    },
+    "awesome": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/awesomeList"
+      }
+    }
+  },
+  "$defs": {
+    "status": {
+      "type": "string",
+      "enum": ["open_source", "research", "commercial_open"]
+    },
+    "flag": {
+      "type": "string",
+      "enum": [
+        "license_caveat",
+        "early_stage",
+        "archived",
+        "heavy_runtime",
+        "requires_api_key",
+        "authorized_testing_only",
+        "commercial_features",
+        "no_license",
+        "noncommercial",
+        "copyleft",
+        "abliterated_or_uncensored"
+      ]
+    },
+    "link": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["label", "url"],
+      "properties": {
+        "label": {
+          "type": "string",
+          "minLength": 1
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "entry": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "desc", "status"],
+      "anyOf": [
+        {
+          "required": ["repo"]
+        },
+        {
+          "required": ["model"]
+        }
+      ],
+      "properties": {
+        "kind": {
+          "type": "string",
+          "enum": ["hf_model"]
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repo": {
+          "type": "string",
+          "pattern": "^[^\\s/]+/[^\\s]+$"
+        },
+        "model": {
+          "type": "string",
+          "pattern": "^[^\\s/]+/[^\\s]+$"
+        },
+        "url": {
+          "type": "string",
+          "minLength": 1
+        },
+        "org": {
+          "type": "string",
+          "minLength": 1
+        },
+        "desc": {
+          "type": "string",
+          "minLength": 1
+        },
+        "status": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/status"
+          }
+        },
+        "flags": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/flag"
+          }
+        },
+        "license": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access": {
+          "type": "string",
+          "minLength": 1
+        },
+        "artifacts": {
+          "type": "string",
+          "minLength": 1
+        },
+        "note": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sources": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/link"
+          }
+        },
+        "related": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/link"
+          }
+        }
+      }
+    },
+    "group": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "entries"],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        }
+      }
+    },
+    "section": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["title", "anchor"],
+      "oneOf": [
+        {
+          "required": ["entries"],
+          "not": {
+            "required": ["groups"]
+          }
+        },
+        {
+          "required": ["groups"],
+          "not": {
+            "required": ["entries"]
+          }
+        }
+      ],
+      "properties": {
+        "title": {
+          "type": "string",
+          "minLength": 1
+        },
+        "anchor": {
+          "type": "string",
+          "minLength": 1
+        },
+        "intro": {
+          "type": "string"
+        },
+        "footer": {
+          "type": "string"
+        },
+        "entries": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/entry"
+          }
+        },
+        "groups": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/group"
+          }
+        }
+      }
+    },
+    "awesomeList": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["name", "repo", "desc"],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "repo": {
+          "type": "string",
+          "pattern": "^[^\\s/]+/[^\\s]+$"
+        },
+        "desc": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}

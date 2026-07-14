@@ -115,6 +115,8 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
   - **Related:** [Cisco AI Defense – mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) · [ATR – Agent Threat Rules](https://github.com/panguard-ai/agent-threat-rules)
 - **[Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)** 🟢 — Large community cybersecurity skill library for AI agents, mapped to MITRE ATT&CK, NIST CSF, MITRE ATLAS, D3FEND, and NIST AI RMF. — **note:** independent community project, not affiliated with Anthropic. [![stars](https://img.shields.io/github/stars/mukul975/Anthropic-Cybersecurity-Skills?style=flat-square&label=%E2%98%85)](https://github.com/mukul975/Anthropic-Cybersecurity-Skills) [![updated](https://img.shields.io/github/last-commit/mukul975/Anthropic-Cybersecurity-Skills?style=flat-square&label=updated)](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
   - **Related:** [sast-skills](https://github.com/utkusen/sast-skills) · [Cisco AI Defense – skill-scanner](https://github.com/cisco-ai-defense/skill-scanner)
+- **[Claude-BugHunter](https://github.com/elementalsouls/Claude-BugHunter)** 🟢 — Claude Code / agent-skill bundle for authorized bug hunting and external red-team workflows across web, API, identity, cloud, recon, reporting, Burp MCP, slash commands, and the cbh CLI. — **note:** skill bundle and workflow knowledge base, not a standalone scanner. [![stars](https://img.shields.io/github/stars/elementalsouls/Claude-BugHunter?style=flat-square&label=%E2%98%85)](https://github.com/elementalsouls/Claude-BugHunter) [![updated](https://img.shields.io/github/last-commit/elementalsouls/Claude-BugHunter?style=flat-square&label=updated)](https://github.com/elementalsouls/Claude-BugHunter)
+  - **Related:** [sast-skills](https://github.com/utkusen/sast-skills) · [Anthropic-Cybersecurity-Skills](https://github.com/mukul975/Anthropic-Cybersecurity-Skills)
 - **[AgentDojo](https://github.com/ethz-spylab/agentdojo)** 🟢🔬 — Benchmark environment for prompt-injection attacks and defenses in tool-using LLM agents. [![stars](https://img.shields.io/github/stars/ethz-spylab/agentdojo?style=flat-square&label=%E2%98%85)](https://github.com/ethz-spylab/agentdojo) [![updated](https://img.shields.io/github/last-commit/ethz-spylab/agentdojo?style=flat-square&label=updated)](https://github.com/ethz-spylab/agentdojo)
   - **Related:** [agent-audit](https://github.com/scadastrangelove/agent-audit) · [ATR – Agent Threat Rules](https://github.com/panguard-ai/agent-threat-rules)
 
@@ -215,6 +217,8 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
   - **Related:** [pentest-ai](https://github.com/0xSteph/pentest-ai)
 - **[DarkMoon](https://github.com/ASCIT31/Dark-Moon)** 🟢⚠️ — Autonomous AI penetration-testing platform that orchestrates specialized web, AD, Kubernetes, CMS, and framework agents through an MCP-controlled Docker toolbox with local privacy-tokenization for sensitive target data. — **note:** GPL-3.0 licensed; heavy Docker/LLM stack, use only for authorized testing. [![stars](https://img.shields.io/github/stars/ASCIT31/Dark-Moon?style=flat-square&label=%E2%98%85)](https://github.com/ASCIT31/Dark-Moon) [![updated](https://img.shields.io/github/last-commit/ASCIT31/Dark-Moon?style=flat-square&label=updated)](https://github.com/ASCIT31/Dark-Moon)
   - **Related:** [PentAGI](https://github.com/vxcontrol/pentagi) · [HexStrike-AI](https://github.com/0x4m4/hexstrike-ai) · [pentest-ai](https://github.com/0xSteph/pentest-ai)
+- **[T3MP3ST](https://github.com/elder-plinius/T3MP3ST)** 🟢⚠️ — Autonomous offensive-security meta-harness that wraps local or API-backed coding agents into a multi-agent recon-to-exploit workflow with MCP/API, War Room UI, tool arsenal, and committed benchmark artifacts. — **note:** very new AGPL-3.0 project with bold benchmark claims; use only for authorized testing and verify independently before operational use. [![stars](https://img.shields.io/github/stars/elder-plinius/T3MP3ST?style=flat-square&label=%E2%98%85)](https://github.com/elder-plinius/T3MP3ST) [![updated](https://img.shields.io/github/last-commit/elder-plinius/T3MP3ST?style=flat-square&label=updated)](https://github.com/elder-plinius/T3MP3ST)
+  - **Related:** [PentAGI](https://github.com/vxcontrol/pentagi) · [HexStrike-AI](https://github.com/0x4m4/hexstrike-ai) · [pentest-ai](https://github.com/0xSteph/pentest-ai)
 - **[Shannon](https://github.com/KeygraphHQ/shannon)** 🟢🟠⚠️ — White-box autonomous AI pentester with strong XBOW-benchmark results. *Shannon Lite is AGPL-3.0; Shannon Pro is commercial.* [![stars](https://img.shields.io/github/stars/KeygraphHQ/shannon?style=flat-square&label=%E2%98%85)](https://github.com/KeygraphHQ/shannon) [![updated](https://img.shields.io/github/last-commit/KeygraphHQ/shannon?style=flat-square&label=updated)](https://github.com/KeygraphHQ/shannon)
 - **[AIDA](https://github.com/Vasco0x4/AIDA)** 🟢⚠️ — Model-agnostic autonomous pentest agent running inside an isolated Docker environment; AGPL-3.0 licensed. [![stars](https://img.shields.io/github/stars/Vasco0x4/AIDA?style=flat-square&label=%E2%98%85)](https://github.com/Vasco0x4/AIDA) [![updated](https://img.shields.io/github/last-commit/Vasco0x4/AIDA?style=flat-square&label=updated)](https://github.com/Vasco0x4/AIDA)
 - **[HackSynth](https://github.com/aielte-research/HackSynth)** 🟢🔬⚠️ — Planner/summarizer LLM-agent framework for autonomous penetration testing and benchmark evaluation; AGPL-3.0 licensed. [![stars](https://img.shields.io/github/stars/aielte-research/HackSynth?style=flat-square&label=%E2%98%85)](https://github.com/aielte-research/HackSynth) [![updated](https://img.shields.io/github/last-commit/aielte-research/HackSynth?style=flat-square&label=updated)](https://github.com/aielte-research/HackSynth)
@@ -260,6 +264,7 @@ Hyper-specific AI/ML tools for a single offensive-security, recon, or detection 
 ### Phishing Detection (Visual / URL)
 
 - **[phishing-url-detection](https://huggingface.co/pirocheto/phishing-url-detection)** 🟢 — 🅐 Packaged URL phishing classifier with ONNX and pickle artifacts. *license: MIT · access: open · artifacts: ONNX, pickle.* Model card recommends ONNX over pickle for safer inference.
+- **[Phishing Email Detection DistilBERT v2.4.1](https://huggingface.co/cybersectony/phishing-email-detection-distilbert_v2.4.1)** 🟢 — DistilBERT text-classification model for email and URL phishing detection, trained on a public Hugging Face phishing-email dataset. *license: Apache-2.0 · access: open · artifacts: Safetensors.* — **note:** strong download signal, but independently verify the very high published metrics before production use.
 - **[PhishIntention](https://github.com/lindsey98/PhishIntention)** 🔬 — 🅐 Deep-vision phishing detector that infers both brand intention and credential-taking intention from webpage appearance and dynamics (USENIX Security 2022). — **note:** CC0-1.0 licensed. [![stars](https://img.shields.io/github/stars/lindsey98/PhishIntention?style=flat-square&label=%E2%98%85)](https://github.com/lindsey98/PhishIntention) [![updated](https://img.shields.io/github/last-commit/lindsey98/PhishIntention?style=flat-square&label=updated)](https://github.com/lindsey98/PhishIntention)
 - **[VisualPhishNet](https://github.com/S-Abdelnabi/VisualPhishNet)** 🔬⚠️ — 🅐 Triplet CNN for zero-day phishing detection by visual similarity to trusted websites (ACM CCS 2020). *(CISPA)* — **note:** no LICENSE file found; dataset access is research-request based. [![stars](https://img.shields.io/github/stars/S-Abdelnabi/VisualPhishNet?style=flat-square&label=%E2%98%85)](https://github.com/S-Abdelnabi/VisualPhishNet) [![updated](https://img.shields.io/github/last-commit/S-Abdelnabi/VisualPhishNet?style=flat-square&label=updated)](https://github.com/S-Abdelnabi/VisualPhishNet)
 
@@ -271,6 +276,7 @@ Hyper-specific AI/ML tools for a single offensive-security, recon, or detection 
 
 - **[DeepSQLi](https://github.com/gatewayd-io/DeepSQLi)** 🟢⚠️ — 🅐 Deep-learning SQL-injection detector with dataset, trained models, and a Flask Prediction API for GatewayD IDS/IPS integration. *(GatewayD)* — **note:** AGPL-3.0 licensed; defensive detector rather than offensive generator. [![stars](https://img.shields.io/github/stars/gatewayd-io/DeepSQLi?style=flat-square&label=%E2%98%85)](https://github.com/gatewayd-io/DeepSQLi) [![updated](https://img.shields.io/github/last-commit/gatewayd-io/DeepSQLi?style=flat-square&label=updated)](https://github.com/gatewayd-io/DeepSQLi)
 - **[deepsecrets](https://github.com/ntoskernel/deepsecrets)** 🟢 — Semantic secrets scanner using lexing/parsing, entropy checks, and hashed-known-secret matching across 500+ languages. — **note:** useful narrow detector, but not a trained ML model. [![stars](https://img.shields.io/github/stars/ntoskernel/deepsecrets?style=flat-square&label=%E2%98%85)](https://github.com/ntoskernel/deepsecrets) [![updated](https://img.shields.io/github/last-commit/ntoskernel/deepsecrets?style=flat-square&label=updated)](https://github.com/ntoskernel/deepsecrets)
+- **[VLAI Vulnerability Severity Classifier](https://huggingface.co/CIRCL/vulnerability-severity-classification-roberta-base)** 🟢🔬 — RoBERTa-based vulnerability-severity classifier trained on CIRCL vulnerability scores to assist triage before manual CVSS scoring. *(CIRCL)* *license: CC-BY-4.0 · access: open · artifacts: Safetensors.*
 
 ---
 
@@ -339,6 +345,7 @@ AI/LLM tooling for CTI gathering, IOC/TTP extraction, and analysis.
   - **Related:** [IATelligence](https://github.com/fr0gger/IATelligence)
 - **[threat-intelligence-cti-analysis](https://github.com/AnandBinuArjun/threat-intelligence-cti-analysis)** 🟢 — NLP/LLM pipeline for IOC extraction, MITRE ATT&CK mapping, and knowledge-graph generation from unstructured CTI. [![stars](https://img.shields.io/github/stars/AnandBinuArjun/threat-intelligence-cti-analysis?style=flat-square&label=%E2%98%85)](https://github.com/AnandBinuArjun/threat-intelligence-cti-analysis) [![updated](https://img.shields.io/github/last-commit/AnandBinuArjun/threat-intelligence-cti-analysis?style=flat-square&label=updated)](https://github.com/AnandBinuArjun/threat-intelligence-cti-analysis)
   - **Related:** [soctalk](https://github.com/soctalk/soctalk)
+- **[CTI-BERT](https://huggingface.co/ibm-research/CTI-BERT)** 🟢🔬 — BERT model pretrained from scratch on a large cybersecurity text corpus for downstream CTI extraction, classification, and question-answering tasks. *(IBM Research)* *license: Apache-2.0 · access: open · artifacts: PyTorch.*
 
 ---
 
@@ -460,6 +467,10 @@ Tools for attacking and defending LLM applications themselves.
 
 - **[SecGPT](https://github.com/Clouditera/SecGPT)** 🟢 — Open cybersecurity-tuned LLM family for vulnerability analysis, log/traffic investigation, anomaly detection, attack/defense reasoning, command analysis, and security Q&A. *(Clouditera)* [![stars](https://img.shields.io/github/stars/Clouditera/SecGPT?style=flat-square&label=%E2%98%85)](https://github.com/Clouditera/SecGPT) [![updated](https://img.shields.io/github/last-commit/Clouditera/SecGPT?style=flat-square&label=updated)](https://github.com/Clouditera/SecGPT)
   - **Related:** [SecGPT model](https://huggingface.co/clouditera/secgpt)
+- **[Trendyol Cybersecurity LLM v2 70B](https://huggingface.co/Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M)** 🟢 — Defense-focused cybersecurity LLM based on Llama-3.3-70B, trained on an alignment-safe security instruction dataset for SOC, cloud, AppSec, detection, and vulnerability-management workflows. *(Trendyol Group Security Team)* *license: Apache-2.0 · access: open · artifacts: GGUF.*
+- **[WhiteRabbitNeo 2.5 Qwen Coder 7B](https://huggingface.co/WhiteRabbitNeo/WhiteRabbitNeo-2.5-Qwen-2.5-Coder-7B)** 🟢⚠️ — Cybersecurity-oriented Qwen2.5-Coder fine-tune positioned for offensive and defensive security assistance. *(WhiteRabbitNeo)* *license: Apache-2.0 + WhiteRabbitNeo restrictions · access: open · artifacts: Safetensors.*
+- **[Lily-Cybersecurity-7B-v0.2](https://huggingface.co/segolilylabs/Lily-Cybersecurity-7B-v0.2)** 🟢 — Mistral-7B-Instruct fine-tune for cybersecurity assistance, trained on hand-crafted security and hacking-related instruction pairs. *(Segolily Labs)* *license: Apache-2.0 · access: open · artifacts: Safetensors.*
+- **[RavenX CyberAgent 35B Q4_K_M](https://huggingface.co/deadbydawn101/RavenX-CyberAgent-Qwen3.6-35B-A3B-Opus-4.7-OpenMythos-Pentester-BugHunter-RATH-GGUF)** 🟢⚠️ — GGUF security-specialized text-generation model positioned for pentest, bug-bounty, tool-calling, MCP, CVSS/CWE, and MITRE ATT&CK workflows. *(RavenX LLC / DeadByDawn101)* *license: Apache-2.0 · access: open · artifacts: GGUF.* — **note:** built from an abliterated base model and marketed for autonomous security assessment; use only in authorized, sandboxed agent harnesses with tool-call validation.
 
 ---
 
@@ -549,22 +560,36 @@ AI tooling for cloud/IaC security, digital forensics, OSINT, and phishing detect
 
 ## Contributing
 
-Contributions are welcome! Open a PR adding entries in the format below, keeping each section sorted by relevance/maintenance.
+Contributions are welcome! This README is generated from structured data.
 
-```
-- **[name](repo-url)** 🟢/🔬/🟠/⚠️ — One-line description. *(maintainer/org)* <stars badge> <last-commit badge>
-  - **Sources:** [upstream A](url) · [upstream B](url)       # optional — projects this is built on
-  - **Related:** [sibling tool](url) · [related project](url) # optional — peers / forks / successors
-```
+1. Edit `data/sections.json` (validated by `data/schema.json`).
+2. Use structured fields such as `status`, `flags`, and `license`; do not paste rendered emoji tags into the data.
+3. Regenerate and check the README:
 
-Badges use the dynamic shields.io GitHub endpoints, so they update automatically:
-
-```
-[![stars](https://img.shields.io/github/stars/OWNER/REPO?style=flat-square&label=★)](https://github.com/OWNER/REPO)
-[![updated](https://img.shields.io/github/last-commit/OWNER/REPO?style=flat-square&label=updated)](https://github.com/OWNER/REPO)
+```bash
+python3 gen_readme.py
+python3 gen_readme.py --check
 ```
 
-Guidelines: link the canonical upstream repo (not a fork); verify the URL resolves; tag the correct type and add ⚠️ for non-permissive, non-commercial, or unclear/no-license projects; prefer real, installable projects over blog-only references.
+Example entry:
+
+```json
+{
+  "name": "ExampleTool",
+  "repo": "OWNER/REPO",
+  "status": ["open_source"],
+  "license": "MIT",
+  "flags": ["early_stage"],
+  "desc": "One factual sentence about what the tool does.",
+  "related": [
+    {"label": "Sibling tool", "url": "https://github.com/OWNER/SIBLING"}
+  ]
+}
+```
+
+Status values: `open_source`, `research`, `commercial_open`. Common flags: `license_caveat`, `early_stage`, `archived`, `heavy_runtime`, `requires_api_key`, `authorized_testing_only`, `commercial_features`, `no_license`, `noncommercial`, `copyleft`, `abliterated_or_uncensored`.
+
+Guidelines: link the canonical upstream repo (not a fork); verify the URL resolves; tag the correct type and add a caveat flag/note for non-permissive, non-commercial, unclear, missing, or restrictive licenses; prefer real, installable projects over blog-only references.
 
 For Hugging Face model entries, include the model id, license, access status (open/gated), and artifact formats (for example Safetensors or ONNX).
 
