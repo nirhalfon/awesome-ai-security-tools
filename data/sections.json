@@ -4157,6 +4157,23 @@
             },
             {
               "kind": "hf_model",
+              "name": "Antares-1B",
+              "model": "fdtn-ai/antares-1b",
+              "org": "Cisco Foundation AI",
+              "desc": "Open-weight security SLM specialized for agentic vulnerability localization: it explores repository snapshots through a terminal-style loop and ranks likely vulnerable files for analyst review.",
+              "note": "— **note:** HF access is gated/manual; related smaller model: [Antares-350M](https://huggingface.co/fdtn-ai/antares-350m), benchmark: [VLoc Bench](https://cisco-foundation-ai.github.io/vulnerability-localization-benchmark/).",
+              "license": "Apache-2.0",
+              "access": "gated manual",
+              "artifacts": "Safetensors + CLI ZIP",
+              "status": [
+                "open_source"
+              ],
+              "flags": [
+                "license_caveat"
+              ]
+            },
+            {
+              "kind": "hf_model",
               "name": "Trendyol Cybersecurity LLM v2 70B",
               "model": "Trendyol/Trendyol-Cybersecurity-LLM-v2-70B-Q4_K_M",
               "org": "Trendyol Group Security Team",
