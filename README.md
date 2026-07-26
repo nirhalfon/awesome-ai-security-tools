@@ -235,6 +235,7 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
 - **[cyber-security-llm-agents](https://github.com/NVISOsecurity/cyber-security-llm-agents)** 🟢⚠️ — AutoGen-based agents for cybersecurity tasks (shown at RSAC 2024). *(NVISO)* *(★ 381 · updated 2024-05-07)*
 - **[Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)** 🟢 — Swarm-intelligence multi-agent pentest with stigmergic blackboard coordination (Go). *(★ 2,110 · updated 2026-06-20)*
 - **[hackGPT](https://github.com/NoDataFound/hackGPT)** 🟢⚠️ — LLM offensive-security toolkit. *(★ 1,195 · updated 2025-07-21)*
+- **[ShiftGrid](https://github.com/BuFuuu/shiftgrid)** 🟢 — Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API.
 
 ---
 
