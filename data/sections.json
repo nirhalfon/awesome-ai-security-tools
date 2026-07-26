@@ -1226,6 +1226,22 @@
                 "updated": "2026-07-23",
                 "snapshot": "2026-07-26"
               }
+            },
+            {
+              "name": "Agent Memory Guard",
+              "repo": "OWASP/www-project-agent-memory-guard",
+              "org": "OWASP",
+              "desc": "Runtime middleware for AI-agent memory reads and writes, screening prompt injection, memory poisoning, secret/PII leakage, protected-key tampering, and size anomalies before persisted memory is reused.",
+              "license": "Apache-2.0",
+              "status": [
+                "open_source"
+              ],
+              "note": "— **note:** OWASP Incubator project; published benchmark numbers are project-reported and should be independently reproduced before production enforcement.",
+              "metrics": {
+                "stars": 102,
+                "updated": "2026-07-26",
+                "snapshot": "2026-07-26"
+              }
             }
           ]
         }
@@ -1731,7 +1747,7 @@
             "open_source"
           ],
           "metrics": {
-            "stars": 44304,
+            "stars": 44305,
             "updated": "2026-07-25",
             "snapshot": "2026-07-26"
           }
@@ -1916,7 +1932,7 @@
             "license_caveat"
           ],
           "metrics": {
-            "stars": 46169,
+            "stars": 46170,
             "updated": "2026-07-24",
             "snapshot": "2026-07-26"
           }
@@ -2006,7 +2022,7 @@
             "open_source"
           ],
           "metrics": {
-            "stars": 2109,
+            "stars": 2110,
             "updated": "2026-06-20",
             "snapshot": "2026-07-26"
           }
@@ -4844,6 +4860,28 @@
           "metrics": {
             "stars": 156,
             "updated": "2026-07-20",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "kind": "awesome_list",
+          "name": "AI Security Repository Radar",
+          "repo": "Zero0x00/Ai-Security-radar-",
+          "desc": "Daily-updated AI/LLM/MCP/RAG security repository radar with category, license, stars, and quality/relevance metadata.",
+          "metrics": {
+            "stars": 5,
+            "updated": "2026-07-26",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "kind": "awesome_list",
+          "name": "awesome-MLSecOps",
+          "repo": "RiccardoBiosas/awesome-MLSecOps",
+          "desc": "Curated MLSecOps resources spanning adversarial ML, LLM security, AI red teaming, model scanning, supply-chain protection, and MLOps pipeline security.",
+          "metrics": {
+            "stars": 442,
+            "updated": "2026-07-24",
             "snapshot": "2026-07-26"
           }
         },

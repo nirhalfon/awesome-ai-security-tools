@@ -159,6 +159,7 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
 - **[DvalinCode](https://github.com/arthurpanhku/dvalincode)** 🟢 — Local-first AI coding agent with runtime governance controls: org/repo policy gates for tools, models, MCP servers, paths, and commands, plus provider/shell/MCP egress controls and hash-chained audit logs. — **note:** young project with limited independent adoption signal. *(★ 96 · updated 2026-07-22)*
   - **Related:** [h5i](https://github.com/h5i-dev/h5i) · [Pipelock](https://github.com/luckyPipewrench/pipelock) · [Armorer Guard](https://github.com/ArmorerLabs/Armorer-Guard)
 - **[TAP](https://github.com/holonym-foundation/tap-oss)** 🟢🟠 — Credential-isolation proxy and MCP server for AI agents: agents send placeholder credentials, TAP injects real secrets server-side after per-action policy checks, with optional human approval on sensitive calls. *(human.tech)* — **note:** Apache-2.0 runtime is self-hostable, but the hosted dashboard and managed-service deployment glue are proprietary; self-hosting puts credential/key isolation and policy-engine hardening on the operator. *(★ 11 · updated 2026-07-23)*
+- **[Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard)** 🟢 — Runtime middleware for AI-agent memory reads and writes, screening prompt injection, memory poisoning, secret/PII leakage, protected-key tampering, and size anomalies before persisted memory is reused. *(OWASP)* — **note:** OWASP Incubator project; published benchmark numbers are project-reported and should be independently reproduced before production enforcement. *(★ 102 · updated 2026-07-26)*
 
 ---
 
@@ -212,7 +213,7 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
 - **[PentestGPT](https://github.com/GreyDGL/PentestGPT)** 🟢🔬 — The original USENIX'24 LLM pentest agent; re-released as an autonomous pipeline with strong benchmark results. *(★ 14,513 · updated 2026-07-14)*
 - **[PentAGI](https://github.com/vxcontrol/pentagi)** 🟢 — Fully autonomous multi-agent pentest framework with Docker sandboxing. *(VXControl)* *(★ 21,248 · updated 2026-05-31)*
 - **[CAI – Cybersecurity AI](https://github.com/aliasrobotics/cai)** 🟢🟠 — Modular, bug-bounty-ready agent framework supporting 300+ LLM models. MIT for research; separate commercial license for production/on-prem. *(Alias Robotics)* *(★ 9,542 · updated 2026-07-14)*
-- **[Strix](https://github.com/usestrix/strix)** 🟢 — Autonomous "AI hackers" that dynamically run code and validate vulnerabilities with PoCs (Apache-2.0). *(★ 44,304 · updated 2026-07-25)*
+- **[Strix](https://github.com/usestrix/strix)** 🟢 — Autonomous "AI hackers" that dynamically run code and validate vulnerabilities with PoCs (Apache-2.0). *(★ 44,305 · updated 2026-07-25)*
 - **[hackingBuddyGPT](https://github.com/ipa-lab/hackingBuddyGPT)** 🟢🔬 — Minimal (~50 LOC) research framework for LLM-driven Linux priv-esc and web pentesting (FSE'23). *(★ 1,187 · updated 2025-08-27)*
 - **[Nebula](https://github.com/berylliumsec/nebula)** 🟢🟠 — AI pentesting CLI assistant with local-LLM support (Llama-3.1, Mistral, DeepSeek). *(★ 1,074 · updated 2026-07-25)*
 - **[HexStrike-AI](https://github.com/0x4m4/hexstrike-ai)** 🟢 — MCP server exposing 150+ security tools (nmap, gobuster, nuclei, …) to AI agents (MIT). *(★ 10,490 · updated 2026-04-27)*
@@ -226,13 +227,13 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
   - **Related:** [PentAGI](https://github.com/vxcontrol/pentagi) · [HexStrike-AI](https://github.com/0x4m4/hexstrike-ai) · [pentest-ai](https://github.com/0xSteph/pentest-ai)
 - **[T3MP3ST](https://github.com/elder-plinius/T3MP3ST)** 🟢⚠️ — Autonomous offensive-security meta-harness that wraps local or API-backed coding agents into a multi-agent recon-to-exploit workflow with MCP/API, War Room UI, tool arsenal, and committed benchmark artifacts. — **note:** very new AGPL-3.0 project with bold benchmark claims; use only for authorized testing and verify independently before operational use. *(★ 5,201 · updated 2026-07-24)*
   - **Related:** [PentAGI](https://github.com/vxcontrol/pentagi) · [HexStrike-AI](https://github.com/0x4m4/hexstrike-ai) · [pentest-ai](https://github.com/0xSteph/pentest-ai)
-- **[Shannon](https://github.com/KeygraphHQ/shannon)** 🟢🟠⚠️ — White-box autonomous AI pentester with strong XBOW-benchmark results. *Shannon Lite is AGPL-3.0; Shannon Pro is commercial.* *(★ 46,169 · updated 2026-07-24)*
+- **[Shannon](https://github.com/KeygraphHQ/shannon)** 🟢🟠⚠️ — White-box autonomous AI pentester with strong XBOW-benchmark results. *Shannon Lite is AGPL-3.0; Shannon Pro is commercial.* *(★ 46,170 · updated 2026-07-24)*
 - **[AIDA](https://github.com/Vasco0x4/AIDA)** 🟢⚠️ — Model-agnostic autonomous pentest agent running inside an isolated Docker environment; AGPL-3.0 licensed. *(★ 454 · updated 2026-07-19)*
 - **[HackSynth](https://github.com/aielte-research/HackSynth)** 🟢🔬⚠️ — Planner/summarizer LLM-agent framework for autonomous penetration testing and benchmark evaluation; AGPL-3.0 licensed. *(★ 309 · updated 2025-06-24)*
 - **[VulnBot](https://github.com/KHenryAegis/VulnBot)** 🟢🔬 — Multi-agent collaborative penetration-testing framework with RAG support. *(★ 181 · updated 2025-04-07)*
 - **[PentestAgent](https://github.com/GH05TCREW/pentestagent)** 🟢 — Black-box AI pentest framework with MCP, multi-agent spawning, and persistent sessions. *(★ 2,836 · updated 2026-07-07)*
 - **[cyber-security-llm-agents](https://github.com/NVISOsecurity/cyber-security-llm-agents)** 🟢⚠️ — AutoGen-based agents for cybersecurity tasks (shown at RSAC 2024). *(NVISO)* *(★ 381 · updated 2024-05-07)*
-- **[Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)** 🟢 — Swarm-intelligence multi-agent pentest with stigmergic blackboard coordination (Go). *(★ 2,109 · updated 2026-06-20)*
+- **[Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)** 🟢 — Swarm-intelligence multi-agent pentest with stigmergic blackboard coordination (Go). *(★ 2,110 · updated 2026-06-20)*
 - **[hackGPT](https://github.com/NoDataFound/hackGPT)** 🟢⚠️ — LLM offensive-security toolkit. *(★ 1,195 · updated 2025-07-21)*
 
 ---
@@ -559,6 +560,8 @@ AI tooling for cloud/IaC security, digital forensics, OSINT, and phishing detect
 - **[Awesome-AI-For-Security](https://github.com/AmanPriyanshu/Awesome-AI-For-Security)** — AI-for-security tools, papers, and datasets. *(★ 142 · updated 2026-07-23)*
 - **[awesome-cybersecurity-agentic-ai](https://github.com/raphabot/awesome-cybersecurity-agentic-ai)** — Agentic-AI cybersecurity tools and security MCP servers. *(★ 519 · updated 2026-06-28)*
 - **[Awesome-Offensive-AI-Agentic-Landscape](https://github.com/Yeti-791/Awesome-Offensive-AI-Agentic-Landscape)** — Offensive AI-agent landscape covering open-source pentest/red-team agents, offensive/security-specialized models, papers, benchmarks, and commercial tools. *(★ 156 · updated 2026-07-20)*
+- **[AI Security Repository Radar](https://github.com/Zero0x00/Ai-Security-radar-)** — Daily-updated AI/LLM/MCP/RAG security repository radar with category, license, stars, and quality/relevance metadata. *(★ 5 · updated 2026-07-26)*
+- **[awesome-MLSecOps](https://github.com/RiccardoBiosas/awesome-MLSecOps)** — Curated MLSecOps resources spanning adversarial ML, LLM security, AI red teaming, model scanning, supply-chain protection, and MLOps pipeline security. *(★ 442 · updated 2026-07-24)*
 - **[open-source-llm-scanners](https://github.com/psiinon/open-source-llm-scanners)** — Open-source LLM scanners and testing tools. *(★ 109 · updated 2026-02-05)*
 - **[awesome-mcp-security](https://github.com/Puliczek/awesome-mcp-security)** — MCP security resources, tools, writeups, and server/client risk references. *(★ 723 · updated 2026-03-03)*
 - **[awesome-ml-security](https://github.com/trailofbits/awesome-ml-security)** — Trail of Bits' curated machine-learning security resources. *(★ 169 · updated 2026-02-06)*
