@@ -245,7 +245,7 @@
                 }
               ],
               "metrics": {
-                "stars": 13785,
+                "stars": 13788,
                 "updated": "2026-07-24",
                 "snapshot": "2026-07-26"
               }
@@ -359,7 +359,7 @@
                 }
               ],
               "metrics": {
-                "stars": 2817,
+                "stars": 2818,
                 "updated": "2026-07-22",
                 "snapshot": "2026-07-26"
               }
@@ -721,7 +721,7 @@
                 }
               ],
               "metrics": {
-                "stars": 26598,
+                "stars": 26601,
                 "updated": "2026-06-26",
                 "snapshot": "2026-07-26"
               }
@@ -802,7 +802,7 @@
               ],
               "metrics": {
                 "stars": 1975,
-                "updated": "2026-07-25",
+                "updated": "2026-07-26",
                 "snapshot": "2026-07-26"
               }
             },
@@ -1010,7 +1010,7 @@
                 }
               ],
               "metrics": {
-                "stars": 2843,
+                "stars": 2847,
                 "updated": "2026-07-26",
                 "snapshot": "2026-07-26"
               }
@@ -1747,7 +1747,7 @@
             "open_source"
           ],
           "metrics": {
-            "stars": 44305,
+            "stars": 44309,
             "updated": "2026-07-25",
             "snapshot": "2026-07-26"
           }
@@ -1788,7 +1788,7 @@
             "open_source"
           ],
           "metrics": {
-            "stars": 10490,
+            "stars": 10491,
             "updated": "2026-04-27",
             "snapshot": "2026-07-26"
           }
@@ -1831,7 +1831,7 @@
             }
           ],
           "metrics": {
-            "stars": 1429,
+            "stars": 1430,
             "updated": "2026-06-30",
             "snapshot": "2026-07-26"
           }
@@ -1914,7 +1914,7 @@
             }
           ],
           "metrics": {
-            "stars": 5201,
+            "stars": 5203,
             "updated": "2026-07-24",
             "snapshot": "2026-07-26"
           }
@@ -1992,7 +1992,7 @@
             "open_source"
           ],
           "metrics": {
-            "stars": 2836,
+            "stars": 2837,
             "updated": "2026-07-07",
             "snapshot": "2026-07-26"
           }
@@ -2426,7 +2426,7 @@
             }
           ],
           "metrics": {
-            "stars": 6369,
+            "stars": 6373,
             "updated": "2026-07-25",
             "snapshot": "2026-07-26"
           }
@@ -2456,7 +2456,7 @@
             }
           ],
           "metrics": {
-            "stars": 6771,
+            "stars": 6779,
             "updated": "2026-07-16",
             "snapshot": "2026-07-26"
           }
@@ -3458,7 +3458,7 @@
                 "open_source"
               ],
               "metrics": {
-                "stars": 23612,
+                "stars": 23613,
                 "updated": "2026-07-25",
                 "snapshot": "2026-07-26"
               }
@@ -3636,7 +3636,7 @@
                 }
               ],
               "metrics": {
-                "stars": 5717,
+                "stars": 5718,
                 "updated": "2026-07-23",
                 "snapshot": "2026-07-26"
               }
@@ -4358,7 +4358,7 @@
             }
           ],
           "metrics": {
-            "stars": 19914,
+            "stars": 19915,
             "updated": "2026-07-16",
             "snapshot": "2026-07-26"
           }
@@ -4506,6 +4506,26 @@
           "metrics": {
             "stars": 354,
             "updated": "2024-08-22",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "name": "AIGoat",
+          "repo": "AISecurityConsortium/AIGoat",
+          "desc": "Local-first vulnerable LLM security playground with guided OWASP LLM Top 10 attack labs, CTF challenges, progressive defenses, and an Ollama-backed AI shopping-assistant target.",
+          "license": "Apache-2.0 + CC BY-NC-SA-4.0 training/challenge content",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "license_caveat",
+            "noncommercial"
+          ],
+          "note": "— **note:** platform code is Apache-2.0, but training/challenge content is CC BY-NC-SA-4.0 and requires permission for commercial workshops.",
+          "metrics": {
+            "stars": 70,
+            "updated": "2026-04-24",
             "snapshot": "2026-07-26"
           }
         },
@@ -4854,12 +4874,34 @@
         },
         {
           "kind": "awesome_list",
+          "name": "awesome-ai-agents-security",
+          "repo": "ProjectRecon/awesome-ai-agents-security",
+          "desc": "Focused map of AI-agent security resources across runtime protection, red-teaming scanners, static analysis, sandboxing, guardrails, benchmarks, and identity.",
+          "metrics": {
+            "stars": 56,
+            "updated": "2026-06-12",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "kind": "awesome_list",
           "name": "Awesome-Offensive-AI-Agentic-Landscape",
           "repo": "Yeti-791/Awesome-Offensive-AI-Agentic-Landscape",
           "desc": "Offensive AI-agent landscape covering open-source pentest/red-team agents, offensive/security-specialized models, papers, benchmarks, and commercial tools.",
           "metrics": {
             "stars": 156,
             "updated": "2026-07-20",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "kind": "awesome_list",
+          "name": "awesome-ai-agent-attacks",
+          "repo": "webpro255/awesome-ai-agent-attacks",
+          "desc": "Sourced timeline of real AI-agent security incidents, breaches, vulnerabilities, and attack techniques.",
+          "metrics": {
+            "stars": 39,
+            "updated": "2026-07-21",
             "snapshot": "2026-07-26"
           }
         },
@@ -4882,6 +4924,17 @@
           "metrics": {
             "stars": 442,
             "updated": "2026-07-24",
+            "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "kind": "awesome_list",
+          "name": "awesome-ai-guardrails",
+          "repo": "enguard-ai/awesome-ai-guardrails",
+          "desc": "Catalog of AI guardrail models, tools, organizations, datasets, and papers, with useful Hugging Face model coverage.",
+          "metrics": {
+            "stars": 61,
+            "updated": "2026-06-22",
             "snapshot": "2026-07-26"
           }
         },
@@ -4935,7 +4988,7 @@
           "repo": "jivoi/awesome-ml-for-cybersecurity",
           "desc": "Large classic list of machine-learning-for-cybersecurity resources (stale-ish but still useful).",
           "metrics": {
-            "stars": 9202,
+            "stars": 9203,
             "updated": "2024-04-11",
             "snapshot": "2026-07-26"
           }
