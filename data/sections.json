@@ -2071,6 +2071,17 @@
             "updated": "2025-07-21",
             "snapshot": "2026-07-26"
           }
+        },
+        {
+          "name": "ShiftGrid",
+          "repo": "BuFuuu/shiftgrid",
+          "desc": "Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "authorized_testing_only"
+          ]
         }
       ]
     },
