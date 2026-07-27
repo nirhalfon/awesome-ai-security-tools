@@ -45,6 +45,7 @@ GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; r
 - [Cloud / IaC / DFIR / OSINT / Phishing](#cloud--iac--dfir--osint--phishing)
 - [Related Awesome Lists](#related-awesome-lists)
 - [Contributing](#contributing)
+- [Contact](#contact)
 - [License](#license)
 
 ---
@@ -630,6 +631,10 @@ Status values: `open_source`, `research`, `commercial_open`. Common flags: `lice
 Guidelines: link the canonical upstream repo (not a fork); verify the URL resolves; tag the correct type and add a caveat flag/note for non-permissive, non-commercial, unclear, missing, or restrictive licenses; prefer real, installable projects over blog-only references.
 
 For Hugging Face model entries, include the model id, license, access status (open/gated), and artifact formats (for example Safetensors or ONNX).
+
+## Contact
+
+Maintained by **Sergey Gordeychik** — [scadastrangelove@gmail.com](mailto:scadastrangelove@gmail.com) · [blog](https://scadastrangelove.blogspot.com/) · [@scadasl](https://x.com/scadasl).
 
 ## License
 

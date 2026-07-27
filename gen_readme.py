@@ -255,6 +255,7 @@ def build(data: dict[str, Any]) -> str:
         for group in section.get("groups", []):
             out.append(f"  - [{group['title']}](#{github_anchor(group['title'])})")
     out.append("- [Contributing](#contributing)")
+    out.append("- [Contact](#contact)")
     out.append("- [License](#license)")
     out.append("")
     out.append("---")
@@ -318,6 +319,10 @@ def build(data: dict[str, Any]) -> str:
     out.append("Guidelines: link the canonical upstream repo (not a fork); verify the URL resolves; tag the correct type and add a caveat flag/note for non-permissive, non-commercial, unclear, missing, or restrictive licenses; prefer real, installable projects over blog-only references.")
     out.append("")
     out.append("For Hugging Face model entries, include the model id, license, access status (open/gated), and artifact formats (for example Safetensors or ONNX).")
+    out.append("")
+    out.append("## Contact")
+    out.append("")
+    out.append("Maintained by **Sergey Gordeychik** — [scadastrangelove@gmail.com](mailto:scadastrangelove@gmail.com) · [blog](https://scadastrangelove.blogspot.com/) · [@scadasl](https://x.com/scadasl).")
     out.append("")
     out.append("## License")
     out.append("")
