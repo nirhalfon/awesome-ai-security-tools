@@ -862,6 +862,25 @@
               }
             },
             {
+              "name": "emisar",
+              "repo": "AndrewDryga/emisar",
+              "desc": "Agent-infrastructure control plane that exposes declared, typed actions through MCP, applies policy and approval gates before dispatch, revalidates calls on an outbound-only host runner, and records separate control-plane and host audit trails.",
+              "note": "— **note:** runner, MCP bridge, and packs are Apache-2.0; the hosted portal/control plane is BSL-1.1 and converts to Apache-2.0 on 2029-07-26. Connecting a runner requires an emisar account and outbound HTTPS to the control plane.",
+              "status": [
+                "commercial_open"
+              ],
+              "license": "BSL-1.1 / Apache-2.0",
+              "flags": [
+                "license_caveat",
+                "commercial_features"
+              ],
+              "metrics": {
+                "stars": 471,
+                "updated": "2026-07-27",
+                "snapshot": "2026-07-27"
+              }
+            },
+            {
               "name": "mcp-context-protector",
               "repo": "trailofbits/mcp-context-protector",
               "org": "Trail of Bits",
