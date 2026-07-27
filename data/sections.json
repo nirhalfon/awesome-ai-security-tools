@@ -1794,6 +1794,35 @@
           }
         },
         {
+          "name": "Deep Eye",
+          "repo": "zakirkun/deep-eye",
+          "desc": "AI-assisted penetration-testing scanner that orchestrates multiple LLM providers for payload generation, 45+ vulnerability checks, CVE/RAG-assisted testing, AI triage, scan diffing, browser automation, proxying, and multi-format reports.",
+          "note": "— **note:** MIT-licensed; authorized use only. Heavy runtime surface: optional browser automation/proxying, plaintext API-key config, plugins with full OS access, and pickle model files called out in SECURITY.md.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "requires_api_key",
+            "heavy_runtime",
+            "authorized_testing_only"
+          ],
+          "related": [
+            {
+              "label": "HexStrike-AI",
+              "url": "https://github.com/0x4m4/hexstrike-ai"
+            },
+            {
+              "label": "pentest-ai",
+              "url": "https://github.com/0xSteph/pentest-ai"
+            }
+          ],
+          "metrics": {
+            "stars": 1852,
+            "updated": "2026-07-25",
+            "snapshot": "2026-07-27"
+          }
+        },
+        {
           "name": "Burp Suite MCP Server",
           "repo": "PortSwigger/mcp-server",
           "org": "PortSwigger",
