@@ -2076,12 +2076,56 @@
           "name": "ShiftGrid",
           "repo": "BuFuuu/shiftgrid",
           "desc": "Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API.",
+          "license": "MIT",
           "status": [
             "open_source"
           ],
           "flags": [
+            "authorized_testing_only",
+            "early_stage"
+          ],
+          "note": "— **note:** early-stage local Docker application with no built-in authentication; keep its API and UI ports bound to localhost.",
+          "metrics": {
+            "stars": 34,
+            "updated": "2026-07-26",
+            "snapshot": "2026-07-27"
+          }
+        },
+        {
+          "name": "BugTraceAI",
+          "repo": "BugTraceAI/BugTraceAI-CLI",
+          "org": "BugTraceAI",
+          "desc": "Self-hosted autonomous web-application security scanner that combines reconnaissance, specialist exploit agents, Go fuzzers, and Playwright validation to produce evidence-backed findings.",
+          "license": "AGPL-3.0",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "copyleft",
+            "requires_api_key",
+            "heavy_runtime",
             "authorized_testing_only"
-          ]
+          ],
+          "note": "— **note:** AGPL-3.0 licensed and beta; use only for authorized testing. Requires an LLM provider or local Ollama endpoint and a substantial Docker/Playwright/Go runtime.",
+          "related": [
+            {
+              "label": "Project overview",
+              "url": "https://github.com/BugTraceAI/BugTraceAI"
+            },
+            {
+              "label": "Web dashboard",
+              "url": "https://github.com/BugTraceAI/BugTraceAI-WEB"
+            },
+            {
+              "label": "Docker launcher",
+              "url": "https://github.com/BugTraceAI/BugTraceAI-Launcher"
+            }
+          ],
+          "metrics": {
+            "stars": 162,
+            "updated": "2026-07-27",
+            "snapshot": "2026-07-27"
+          }
         }
       ]
     },

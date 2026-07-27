@@ -237,7 +237,9 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
 - **[cyber-security-llm-agents](https://github.com/NVISOsecurity/cyber-security-llm-agents)** 🟢⚠️ — AutoGen-based agents for cybersecurity tasks (shown at RSAC 2024). *(NVISO)* *(★ 381 · updated 2024-05-07)*
 - **[Pentest-Swarm-AI](https://github.com/Armur-Ai/Pentest-Swarm-AI)** 🟢 — Swarm-intelligence multi-agent pentest with stigmergic blackboard coordination (Go). *(★ 2,110 · updated 2026-06-20)*
 - **[hackGPT](https://github.com/NoDataFound/hackGPT)** 🟢⚠️ — LLM offensive-security toolkit. *(★ 1,195 · updated 2025-07-21)*
-- **[ShiftGrid](https://github.com/BuFuuu/shiftgrid)** 🟢 — Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API.
+- **[ShiftGrid](https://github.com/BuFuuu/shiftgrid)** 🟢 — Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API. — **note:** early-stage local Docker application with no built-in authentication; keep its API and UI ports bound to localhost. *(★ 34 · updated 2026-07-26)*
+- **[BugTraceAI](https://github.com/BugTraceAI/BugTraceAI-CLI)** 🟢⚠️ — Self-hosted autonomous web-application security scanner that combines reconnaissance, specialist exploit agents, Go fuzzers, and Playwright validation to produce evidence-backed findings. *(BugTraceAI)* — **note:** AGPL-3.0 licensed and beta; use only for authorized testing. Requires an LLM provider or local Ollama endpoint and a substantial Docker/Playwright/Go runtime. *(★ 162 · updated 2026-07-27)*
+  - **Related:** [Project overview](https://github.com/BugTraceAI/BugTraceAI) · [Web dashboard](https://github.com/BugTraceAI/BugTraceAI-WEB) · [Docker launcher](https://github.com/BugTraceAI/BugTraceAI-Launcher)
 
 ---
 
