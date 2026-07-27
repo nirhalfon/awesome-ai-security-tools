@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-07-26. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-07-27. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -27,7 +27,7 @@ GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; r
   - [AI-Assisted Fuzzing](#ai-assisted-fuzzing)
   - [Password / Credential ML](#password--credential-ml)
   - [Phishing Detection (Visual / URL)](#phishing-detection-visual--url)
-  - [ML-Generated Detection Rules](#ml-generated-detection-rules)
+  - [AI/ML-Assisted Detection Rules & Engines](#aiml-assisted-detection-rules--engines)
   - [Defensive Trained-Model Detectors](#defensive-trained-model-detectors)
 - [AI-Powered SAST & Secure Code Review](#ai-powered-sast--secure-code-review)
 - [LLM-Driven Fuzzing](#llm-driven-fuzzing)
@@ -276,9 +276,12 @@ Hyper-specific AI/ML tools for a single offensive-security, recon, or detection 
 - **[PhishIntention](https://github.com/lindsey98/PhishIntention)** 🔬 — 🅐 Deep-vision phishing detector that infers both brand intention and credential-taking intention from webpage appearance and dynamics (USENIX Security 2022). — **note:** CC0-1.0 licensed. *(★ 262 · updated 2026-06-04)*
 - **[VisualPhishNet](https://github.com/S-Abdelnabi/VisualPhishNet)** 🔬⚠️ — 🅐 Triplet CNN for zero-day phishing detection by visual similarity to trusted websites (ACM CCS 2020). *(CISPA)* — **note:** no LICENSE file found; dataset access is research-request based. *(★ 30 · updated 2022-02-09)*
 
-### ML-Generated Detection Rules
+### AI/ML-Assisted Detection Rules & Engines
 
-- **[yaraml_rules](https://github.com/sophos/yaraml_rules)** 🟢 — 🅐 Trains scikit-learn classifiers on malware/benign corpora and compiles the learned model into deployable YARA rules (Apache-2.0). *(Sophos)* *(★ 214 · updated 2020-12-18)*
+- **[SYARA](https://github.com/nabeelxy/syara)** 🟢🔬 — 🅐 Semantic YARA-like rule engine for text and multimodal signals, adding embedding similarity, classifier-backed rules, LLM evaluators, and pHash matching to familiar YARA-style syntax. — **note:** early-stage engine; useful for LLM-era intent signals such as phishing, prompt injection, jailbreaks, hallucination, and disinformation rather than classic binary-only YARA matching. *(★ 17 · updated 2026-03-05)*
+- **[AutoYara](https://github.com/FutureComputing4AI/AutoYara)** 🟢🔬 — 🅐 Research implementation of automatic YARA rule generation via biclustering over byte n-grams for malware-family samples. — **note:** Apache-2.0 research code from the ACM AISec 2020 paper; README explicitly says it comes with no warranty or support. *(★ 79 · updated 2025-10-08)*
+  - **Related:** [Automatic Yara Rule Generation Using Biclustering](https://arxiv.org/abs/2009.03779)
+- **[RuleLLM](https://github.com/zhang-xr/RuleLLM)** 🟢🔬 — 🅑 LLM-assisted malware-rule generator that clusters malicious code samples and produces/refines/validates YARA and Semgrep rules. — **note:** MIT-licensed research prototype; requires OpenAI-compatible API access plus YARA/Semgrep validators. *(★ 12 · updated 2025-04-25)*
 
 ### Defensive Trained-Model Detectors
 
@@ -296,6 +299,8 @@ Static analysis and secure code review enhanced with LLMs.
   - **Related:** [xvulnhuntr](https://github.com/CompassSecurity/xvulnhuntr) · [vulnhuntr-mod](https://github.com/kxcode/vulnhuntr-mod)
 - **[deepsec](https://github.com/vercel-labs/deepsec)** 🟢 — Agent-powered security harness for scanning large codebases with coding agents, resumable parallel runs, custom matchers, and optional revalidation. *(Vercel Labs)* *(★ 6,373 · updated 2026-07-25)*
   - **Related:** [claude-code-security-review](https://github.com/anthropics/claude-code-security-review) · [sast-skills](https://github.com/utkusen/sast-skills)
+- **[Visa Vulnerability Agentic Harness](https://github.com/visa/visa-vulnerability-agentic-harness)** 🟢 — Agentic SAST pipeline for autonomous vulnerability discovery, exploitability verification, SARIF/Markdown reporting, remediation, and validation using frontier AI models. *(Visa)* — **note:** Apache-2.0; authorized use only. The default `scan` profile can continue into remediation and edit target source files; use `--stop-after s9` for detection-only runs. *(★ 1,666 · updated 2026-07-03)*
+  - **Related:** [deepsec](https://github.com/vercel-labs/deepsec) · [defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)
 - **[defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)** 🟢 — Reference Claude Code skills and autonomous vulnerability-discovery pipeline for threat modeling, static scanning, triage, execution-verified C/C++ memory-bug discovery, reporting, and patch generation. *(Anthropic)* — **note:** official reference implementation, not maintained as a product; the autonomous pipeline executes target code and should be run only inside the documented gVisor sandbox. *(★ 6,779 · updated 2026-07-16)*
   - **Related:** [deepsec](https://github.com/vercel-labs/deepsec) · [claude-code-security-review](https://github.com/anthropics/claude-code-security-review)
 - **[rust-in-peace](https://github.com/scadastrangelove/rust-in-peace)** 🟢 — Rust-security fork of Anthropic's defending-code reference harness, adding a Rust profile for agentic review of unsafe/FFI memory bugs, panic-DoS, deserialization-trust issues, and Miri/ASan/panic/hang-verified findings. *(Sergey Gordeychik)* — **note:** very new Apache-2.0 fork; autonomous runs execute target code and should use the documented sandbox. *(★ 7 · updated 2026-07-26)*
@@ -373,6 +378,8 @@ AI agents for SOC alert triage, investigation, and incident response.
 - **[agentic-soc-platform](https://github.com/FunnyWolf/agentic-soc-platform)** 🟢 — Agentic SOC platform (LangGraph/Dify) with local-LLM support. *(★ 965 · updated 2026-07-24)*
 - **[SigmAIQ](https://github.com/AttackIQ/SigmAIQ)** 🟢⚠️ — pySigma wrapper and LangChain toolkit for automatic Sigma rule creation and translation; LGPL-2.1 licensed. *(AttackIQ)* *(★ 97 · updated 2025-11-03)*
   - **Related:** [SigmaOptimizer](https://github.com/YusukeJustinNakajima/SigmaOptimizer)
+- **[RulePilot](https://github.com/LLM4SOC-Topic/RulePilot)** 🟢🔬 — LLM-powered security-rule generation agent for Splunk, Microsoft Sentinel, and Elastic, with field detection from log samples, multi-stage refinement, and cross-platform rule conversion. — **note:** MIT-licensed ICSE 2026 research prototype; requires an OpenAI API key. *(★ 15 · updated 2025-10-20)*
+  - **Related:** [SigmAIQ](https://github.com/AttackIQ/SigmAIQ) · [SigmaOptimizer](https://github.com/YusukeJustinNakajima/SigmaOptimizer)
 - **[SOCGPT](https://github.com/Ninadjos/SOCGPT-AI-Powered-SOC-Assistant)** 🟢 — LLM log summarization, severity triage, MITRE mapping, and Q&A. *(★ 7 · updated 2025-06-11)*
 - **[AttackGen](https://github.com/mrwadams/attackgen)** 🟢 — LLM-driven incident-response scenario generator using MITRE ATT&CK + ATLAS. *(★ 1,228 · updated 2026-07-21)*
 
@@ -426,6 +433,8 @@ Tools for attacking and defending LLM applications themselves.
   - **Related:** [garak](https://github.com/NVIDIA/garak) · [spikee](https://github.com/ReversecLabs/spikee)
 - **[HackAgent](https://github.com/AISecurityLab/hackagent)** 🟢 — Python SDK and CLI for red-teaming AI agents with research-backed attacks such as AdvPrefix, AutoDAN-Turbo, PAIR, TAP, FlipAttack, BoN, and static templates across agent frameworks. — **note:** works locally without an API key; optional cloud reporting is available. *(★ 336 · updated 2026-07-22)*
   - **Related:** [PyRIT](https://github.com/microsoft/PyRIT) · [garak](https://github.com/NVIDIA/garak) · [agentic_security](https://github.com/msoedov/agentic_security)
+- **[wallbreaker](https://github.com/JailbrokenAI/wallbreaker)** 🟢🔬⚠️ — Claude-Code-style terminal and red-team harness for authorized LLM safety testing, with HarmBench, PAIR/TAP, Crescendo, GCG-style workflows, Parseltongue transforms, MCP tooling, LLM judges, and reproducible run artifacts. — **note:** offensive jailbreak toolkit for authorized testing only; AGPL-3.0 licensed and NOTICE flags external jailbreak corpora with their own or missing upstream licenses. *(★ 609 · updated 2026-07-18)*
+  - **Related:** [HarmBench](https://github.com/centerforaisafety/HarmBench) · [PyRIT](https://github.com/microsoft/PyRIT) · [garak](https://github.com/NVIDIA/garak)
 - **[HiveTrace Red](https://github.com/HiveTrace/HiveTraceRed)** 🟢 — Early-stage LLM red-teaming framework with 80+ attack templates, async evaluation pipelines, WildGuard evaluators, multi-provider support, and HTML reporting. — **note:** young project with limited independent adoption signal. *(★ 28 · updated 2026-07-21)*
   - **Related:** [garak](https://github.com/NVIDIA/garak) · [PyRIT](https://github.com/microsoft/PyRIT) · [promptfoo](https://github.com/promptfoo/promptfoo)
 - **[DeepTeam](https://github.com/confident-ai/deepteam)** 🟢 — Open-source framework for red-teaming LLMs and LLM systems across jailbreaks, prompt injection, data leakage, and safety risks. *(★ 2,300 · updated 2026-07-20)*

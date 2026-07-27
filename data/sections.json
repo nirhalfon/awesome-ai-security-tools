@@ -2307,20 +2307,64 @@
           ]
         },
         {
-          "title": "ML-Generated Detection Rules",
+          "title": "AI/ML-Assisted Detection Rules & Engines",
           "entries": [
             {
-              "name": "yaraml_rules",
-              "repo": "sophos/yaraml_rules",
-              "org": "Sophos",
-              "desc": "🅐 Trains scikit-learn classifiers on malware/benign corpora and compiles the learned model into deployable YARA rules (Apache-2.0).",
+              "name": "SYARA",
+              "repo": "nabeelxy/syara",
+              "desc": "🅐 Semantic YARA-like rule engine for text and multimodal signals, adding embedding similarity, classifier-backed rules, LLM evaluators, and pHash matching to familiar YARA-style syntax.",
+              "note": "— **note:** early-stage engine; useful for LLM-era intent signals such as phishing, prompt injection, jailbreaks, hallucination, and disinformation rather than classic binary-only YARA matching.",
               "status": [
-                "open_source"
+                "open_source",
+                "research"
+              ],
+              "flags": [
+                "early_stage"
               ],
               "metrics": {
-                "stars": 214,
-                "updated": "2020-12-18",
-                "snapshot": "2026-07-26"
+                "stars": 17,
+                "updated": "2026-03-05",
+                "snapshot": "2026-07-27"
+              }
+            },
+            {
+              "name": "AutoYara",
+              "repo": "FutureComputing4AI/AutoYara",
+              "desc": "🅐 Research implementation of automatic YARA rule generation via biclustering over byte n-grams for malware-family samples.",
+              "note": "— **note:** Apache-2.0 research code from the ACM AISec 2020 paper; README explicitly says it comes with no warranty or support.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "related": [
+                {
+                  "label": "Automatic Yara Rule Generation Using Biclustering",
+                  "url": "https://arxiv.org/abs/2009.03779"
+                }
+              ],
+              "metrics": {
+                "stars": 79,
+                "updated": "2025-10-08",
+                "snapshot": "2026-07-27"
+              }
+            },
+            {
+              "name": "RuleLLM",
+              "repo": "zhang-xr/RuleLLM",
+              "desc": "🅑 LLM-assisted malware-rule generator that clusters malicious code samples and produces/refines/validates YARA and Semgrep rules.",
+              "note": "— **note:** MIT-licensed research prototype; requires OpenAI-compatible API access plus YARA/Semgrep validators.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "flags": [
+                "requires_api_key",
+                "early_stage"
+              ],
+              "metrics": {
+                "stars": 12,
+                "updated": "2025-04-25",
+                "snapshot": "2026-07-27"
               }
             }
           ]
@@ -2429,6 +2473,36 @@
             "stars": 6373,
             "updated": "2026-07-25",
             "snapshot": "2026-07-26"
+          }
+        },
+        {
+          "name": "Visa Vulnerability Agentic Harness",
+          "repo": "visa/visa-vulnerability-agentic-harness",
+          "org": "Visa",
+          "desc": "Agentic SAST pipeline for autonomous vulnerability discovery, exploitability verification, SARIF/Markdown reporting, remediation, and validation using frontier AI models.",
+          "note": "— **note:** Apache-2.0; authorized use only. The default `scan` profile can continue into remediation and edit target source files; use `--stop-after s9` for detection-only runs.",
+          "status": [
+            "open_source"
+          ],
+          "flags": [
+            "requires_api_key",
+            "heavy_runtime",
+            "authorized_testing_only"
+          ],
+          "related": [
+            {
+              "label": "deepsec",
+              "url": "https://github.com/vercel-labs/deepsec"
+            },
+            {
+              "label": "defending-code-reference-harness",
+              "url": "https://github.com/anthropics/defending-code-reference-harness"
+            }
+          ],
+          "metrics": {
+            "stars": 1666,
+            "updated": "2026-07-03",
+            "snapshot": "2026-07-27"
           }
         },
         {
@@ -3073,6 +3147,35 @@
           }
         },
         {
+          "name": "RulePilot",
+          "repo": "LLM4SOC-Topic/RulePilot",
+          "desc": "LLM-powered security-rule generation agent for Splunk, Microsoft Sentinel, and Elastic, with field detection from log samples, multi-stage refinement, and cross-platform rule conversion.",
+          "note": "— **note:** MIT-licensed ICSE 2026 research prototype; requires an OpenAI API key.",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "requires_api_key",
+            "early_stage"
+          ],
+          "related": [
+            {
+              "label": "SigmAIQ",
+              "url": "https://github.com/AttackIQ/SigmAIQ"
+            },
+            {
+              "label": "SigmaOptimizer",
+              "url": "https://github.com/YusukeJustinNakajima/SigmaOptimizer"
+            }
+          ],
+          "metrics": {
+            "stars": 15,
+            "updated": "2025-10-20",
+            "snapshot": "2026-07-27"
+          }
+        },
+        {
           "name": "SOCGPT",
           "repo": "Ninadjos/SOCGPT-AI-Powered-SOC-Assistant",
           "desc": "LLM log summarization, severity triage, MITRE mapping, and Q&A.",
@@ -3536,6 +3639,39 @@
                 "stars": 336,
                 "updated": "2026-07-22",
                 "snapshot": "2026-07-26"
+              }
+            },
+            {
+              "name": "wallbreaker",
+              "repo": "JailbrokenAI/wallbreaker",
+              "desc": "Claude-Code-style terminal and red-team harness for authorized LLM safety testing, with HarmBench, PAIR/TAP, Crescendo, GCG-style workflows, Parseltongue transforms, MCP tooling, LLM judges, and reproducible run artifacts.",
+              "note": "— **note:** offensive jailbreak toolkit for authorized testing only; AGPL-3.0 licensed and NOTICE flags external jailbreak corpora with their own or missing upstream licenses.",
+              "status": [
+                "open_source",
+                "research"
+              ],
+              "flags": [
+                "copyleft",
+                "authorized_testing_only"
+              ],
+              "related": [
+                {
+                  "label": "HarmBench",
+                  "url": "https://github.com/centerforaisafety/HarmBench"
+                },
+                {
+                  "label": "PyRIT",
+                  "url": "https://github.com/microsoft/PyRIT"
+                },
+                {
+                  "label": "garak",
+                  "url": "https://github.com/NVIDIA/garak"
+                }
+              ],
+              "metrics": {
+                "stars": 609,
+                "updated": "2026-07-18",
+                "snapshot": "2026-07-27"
               }
             },
             {
