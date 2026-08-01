@@ -3617,6 +3617,14 @@
         {
           "title": "Scanners, Evals & Guardrails",
           "entries": [
+                        {
+              "name": "Nuguard",
+              "repo": "NuGuardAI/nuguard",
+              "status": ["open_source"],
+              "license": "Apache 2.0",
+              "desc": "AI red-teaming tool and LLM security framework to evaluate agentic AI applications- SBOM generation, vulnerability assessment, etc",
+              "metrics": {"stars": 17, "updated": "2026-07-31", "snapshot": "2026-07-31"},
+            }
             {
               "name": "garak",
               "repo": "NVIDIA/garak",
