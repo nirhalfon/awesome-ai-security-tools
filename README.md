@@ -430,7 +430,8 @@ Tools for attacking and defending LLM applications themselves.
 
 ### Scanners, Evals & Guardrails
 
-- **[Nuguard](https://github.com/NuGuardAI/nuguard)** 🟢 — Generates an AI-SBOM, red-teams agentic AI apps for prompt injection/tool misuse/data exfiltration, and validates behavioral policy compliance with SARIF/JSON/Markdown reports *(★ 17 · updated 2026-07-31)*
+- **[NuGuard](https://github.com/NuGuardAI/nuguard)** 🟢 — Generates an AI-SBOM, statically analyzes agentic applications, red-teams live targets for prompt injection/tool misuse/data exfiltration, and validates behavioral policy compliance with SARIF, JSON, and Markdown reports. *(NuGuard AI)* — **note:** beta project; live red-team scans actively probe the target and require authorization. LLM-assisted features need provider credentials, and the optional NuGuard.ai hosted offering adds commercial features. *(★ 17 · updated 2026-07-31)*
+  - **Related:** [garak](https://github.com/NVIDIA/garak) · [Medusa](https://github.com/Pantheon-Security/medusa)
 - **[garak](https://github.com/NVIDIA/garak)** 🟢 — The LLM vulnerability scanner — probes for prompt injection, jailbreaks, data leakage, and more. *(NVIDIA)* *(★ 8,577 · updated 2026-07-24)*
   - **Related:** [PyRIT](https://github.com/microsoft/PyRIT) · [promptfoo](https://github.com/promptfoo/promptfoo)
 - **[PyRIT](https://github.com/microsoft/PyRIT)** 🟢 — Python Risk Identification Tool; battle-tested across 100+ GenAI red-team operations. *(Microsoft)* *(★ 4,181 · updated 2026-07-26)*
