@@ -3617,12 +3617,12 @@
         {
           "title": "Scanners, Evals & Guardrails",
           "entries": [
-                        {
+            {
               "name": "Nuguard",
               "repo": "NuGuardAI/nuguard",
               "status": ["open_source"],
               "license": "Apache 2.0",
-              "desc": "AI red-teaming tool and LLM security framework to evaluate agentic AI applications- SBOM generation, vulnerability assessment, etc",
+              "desc": "Generates an AI-SBOM, red-teams agentic AI apps for prompt injection/tool misuse/data exfiltration, and validates behavioral policy compliance with SARIF/JSON/Markdown reports",
               "metrics": {"stars": 17, "updated": "2026-07-31", "snapshot": "2026-07-31"},
             }
             {
