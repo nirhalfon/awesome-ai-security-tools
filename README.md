@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-06. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-09. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -109,6 +109,8 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
 - **[Sunglasses](https://github.com/sunglasses-dev/sunglasses)** 🟢 — Local input/content scanner for AI agents that checks prompts, files, media metadata, skills, and tool descriptions against pattern and mechanism-based prompt-injection, exfiltration, command-injection, and agent-threat rules. — **note:** early-stage project; published precision/recall benchmark is self-reported by the project. *(★ 4 · updated 2026-08-06)*
   - **Related:** [skilltotal](https://github.com/pezhik/skilltotal) · [Armorer Guard](https://github.com/ArmorerLabs/Armorer-Guard)
 - **[trentclaw](https://github.com/trnt-ai/trent-openclaw-security-assessment)** 🟠 — Client-side security auditor for OpenClaw deployments: applies pattern-based secret redaction locally, then uploads config/skill metadata and confirm-gated skill archives to Trent AI's API, which identifies misconfigurations, risky skills (prompt injection, permission escalation, data exfiltration), and chained attack paths. *(Trent AI)* — **note:** core detection runs server-side via the Trent AI API (requires an API key); the Apache-2.0 client collects OpenClaw config/skill metadata, applies pattern-based secret redaction locally, and uploads skill archives only after an explicit in-terminal confirmation. *(★ 23 · updated 2026-07-27)*
+- **[A2A Security Scanner](https://github.com/cisco-ai-defense/a2a-scanner)** 🟢 — CLI and PyPI scanner for Agent-to-Agent (A2A) agent cards, source code, registries, and live endpoints using specification validation, YARA rules, heuristics, endpoint testing, and an optional LLM analyzer. *(Cisco AI Defense)* *(★ 162 · updated 2026-04-16)*
+  - **Related:** [Cisco AI Defense – mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) · [Agent Threat Rules](https://github.com/Agent-Threat-Rule/agent-threat-rules)
 
 ### Frameworks, Rule Standards & Benchmarks
 
@@ -172,6 +174,17 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
   - **Related:** [h5i](https://github.com/h5i-dev/h5i) · [Pipelock](https://github.com/luckyPipewrench/pipelock) · [Armorer Guard](https://github.com/ArmorerLabs/Armorer-Guard)
 - **[TAP](https://github.com/holonym-foundation/tap-oss)** 🟢🟠 — Credential-isolation proxy and MCP server for AI agents: agents send placeholder credentials, TAP injects real secrets server-side after per-action policy checks, with optional human approval on sensitive calls. *(human.tech)* — **note:** Apache-2.0 runtime is self-hostable, but the hosted dashboard and managed-service deployment glue are proprietary; self-hosting puts credential/key isolation and policy-engine hardening on the operator. *(★ 12 · updated 2026-07-23)*
 - **[Agent Memory Guard](https://github.com/OWASP/www-project-agent-memory-guard)** 🟢 — Runtime middleware for AI-agent memory reads and writes, screening prompt injection, memory poisoning, secret/PII leakage, protected-key tampering, and size anomalies before persisted memory is reused. *(OWASP)* — **note:** OWASP Incubator project; published benchmark numbers are project-reported and should be independently reproduced before production enforcement. *(★ 112 · updated 2026-08-06)*
+- **[AIO Sandbox](https://github.com/agent-infra/sandbox)** 🟢⚠️ — All-in-one Docker workspace for AI agents with browser, shell, file, code-execution, MCP, and VSCode interfaces, plus API-key/JWT controls and private-deployment guidance. — **note:** the public repository ships SDKs, integrations, and docs rather than the core runtime service; official Chromium-enabled deployments use `seccomp=unconfined`. Treat it as a trusted execution environment, not a hardened isolation boundary; use separate VMs or a hardened runtime plus network policy for hostile workloads. *(★ 5,652 · updated 2026-07-02)*
+  - **Related:** [Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox) · [microsandbox](https://github.com/superradcompany/microsandbox)
+- **[Agentgateway](https://github.com/agentgateway/agentgateway)** 🟢 — Agent-native proxy and gateway for MCP and A2A traffic with OAuth/JWT/API-key authentication, CEL-based RBAC policies, TLS, rate limiting, and OpenTelemetry observability. *(★ 4,274 · updated 2026-08-07)*
+  - **Related:** [MCP Gateway](https://github.com/lasso-security/mcp-gateway) · [Pipelock](https://github.com/luckyPipewrench/pipelock)
+- **[Kubernetes Agent Sandbox](https://github.com/kubernetes-sigs/agent-sandbox)** 🟢 — Kubernetes CRDs and controllers for isolated, stateful singleton agent workloads, delegating low-level isolation to configured runtimes such as gVisor or Kata Containers. *(Kubernetes SIG Apps)* — **note:** sandbox orchestrator, not an isolation runtime itself; security depends on the selected RuntimeClass, network policy, and workload configuration. *(★ 3,454 · updated 2026-08-07)*
+  - **Sources:** [Kubernetes announcement](https://kubernetes.io/blog/2026/03/20/running-agents-on-kubernetes-with-agent-sandbox/)
+  - **Related:** [AIO Sandbox](https://github.com/agent-infra/sandbox)
+- **[Prismor](https://github.com/PrismorSec/prismor)** 🟢 — Self-hosted runtime control plane for coding agents with pre-tool-call hooks, policy-driven observe/approve/block decisions, an MCP gateway, secret and egress controls, and tamper-evident audit evidence. *(★ 280 · updated 2026-08-09)*
+  - **Related:** [Armorer Guard](https://github.com/ArmorerLabs/Armorer-Guard) · [AgentLock](https://github.com/webpro255/agentlock)
+- **[tirith](https://github.com/sheeki03/tirith)** 🟢⚠️ — Terminal guard for developers and AI coding agents that intercepts homograph and terminal-injection tricks, obfuscated execution chains, pipe-to-shell patterns, credential exfiltration, and malicious skill/config files. — **note:** AGPL-3.0 with a separate commercial license; shell interception is a host-side guard, not a substitute for sandboxing or least-privilege tool access. *(★ 2,648 · updated 2026-08-09)*
+  - **Related:** [nono](https://github.com/nolabs-ai/nono) · [gate.cat](https://github.com/BGMLAI/gate.cat)
 
 ---
 
@@ -400,6 +413,8 @@ AI agents for SOC alert triage, investigation, and incident response.
   - **Related:** [SigmAIQ](https://github.com/AttackIQ/SigmAIQ) · [SigmaOptimizer](https://github.com/YusukeJustinNakajima/SigmaOptimizer)
 - **[SOCGPT](https://github.com/Ninadjos/SOCGPT-AI-Powered-SOC-Assistant)** 🟢 — LLM log summarization, severity triage, MITRE mapping, and Q&A. *(★ 6 · updated 2025-06-11)*
 - **[AttackGen](https://github.com/mrwadams/attackgen)** 🟢 — LLM-driven incident-response scenario generator using MITRE ATT&CK + ATLAS. *(★ 1,230 · updated 2026-07-21)*
+- **[Google Security Operations and Threat Intelligence MCP Server](https://github.com/google/mcp-security)** 🟢 — MCP servers and packages that let MCP clients access Google Security Operations, SOAR, Google Threat Intelligence, and Security Command Center for investigation, hunting, and security automation workflows. *(Google Cloud)* — **note:** integration layer rather than an MCP-defense tool; requires Google credentials and access to the connected security products/services. *(★ 513 · updated 2026-06-03)*
+  - **Related:** [MCP_Security](https://github.com/fr0gger/MCP_Security) · [Vigil SOC](https://github.com/Vigil-SOC/vigil)
 
 ---
 
@@ -499,6 +514,13 @@ Tools for attacking and defending LLM applications themselves.
 - **[prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses)** 🟢⚠️ — Curated catalog of practical defenses against prompt injection. *(★ 719 · updated 2025-02-22)*
 - **[little-canary](https://github.com/hermes-labs-ai/little-canary)** 🟢🔬 — Prompt-injection preflight risk sensor that routes untrusted input through a powerless sacrificial model, then reads response residue to return pass/flag/block before the primary agent acts. — **note:** experimental sensing layer, not a security guarantee or runtime containment. A failed canary can return availability-first routing with explicit degraded coverage; remote/OpenAI-compatible canary or judge endpoints receive raw input. *(★ 26 · updated 2026-08-06)*
   - **Related:** [Rebuff](https://github.com/protectai/rebuff) · [prompt-injection-defenses](https://github.com/tldrsec/prompt-injection-defenses)
+- **[Kiji Privacy Proxy](https://github.com/Dataiku/kiji-proxy)** 🟢 — Local privacy proxy for OpenAI-compatible AI API traffic that detects and masks 26 PII types with an ONNX model before forwarding requests, then restores mappings in responses. *(Dataiku 575 Lab)* — **note:** protects configured proxied traffic, not every path by which an application or agent can disclose data; operators retain responsibility for proxy routing and local mapping storage. *(★ 420 · updated 2026-08-01)*
+  - **Related:** [LLM Guard](https://github.com/protectai/llm-guard) · [Kiji PII model](https://huggingface.co/DataikuNLP/kiji-pii-model-onnx)
+- **[Anamorpher](https://github.com/trailofbits/anamorpher)** 🟢🔬 — Research tool with a frontend and Python API for crafting and visualizing image-scaling attacks that reveal hidden prompt injections to multimodal AI systems after downscaling. *(Trail of Bits)* — **note:** active beta research tool for authorized testing; generated payloads are sensitive to the target's image-resampling implementation and preprocessing pipeline. *(★ 1,076 · updated 2026-05-19)*
+  - **Sources:** [Trail of Bits research announcement](https://blog.trailofbits.com/2025/08/21/weaponizing-image-scaling-against-production-ai-systems/)
+  - **Related:** [PromptFuzz](https://github.com/PromptFuzz/PromptFuzz) · [promptfoo](https://github.com/promptfoo/promptfoo)
+- **[Prompt SIREN](https://github.com/facebookresearch/prompt-siren)** 🟢🔬 — Research workbench for developing and evaluating prompt-injection attacks and defenses with state-machine agent control, AgentDojo/SWE-bench integrations, configuration sweeps, and reproducible result aggregation. *(Meta AI)* — **note:** experiment harness; running target evaluations requires model-provider credentials and may need Docker or browser extras depending on the selected environment. *(★ 59 · updated 2026-07-24)*
+  - **Related:** [AgentDojo](https://github.com/ethz-spylab/agentdojo) · [PyRIT](https://github.com/microsoft/PyRIT)
 
 ### Prompt-Injection Classifier Models
 
@@ -559,6 +581,10 @@ Offensive agents and the benchmarks used to evaluate them.
 - **[claude-bug-bounty](https://github.com/shuvonsec/claude-bug-bounty)** 🟢 — Claude Code plugin orchestrating recon → vuln classes → reporting. *(★ 4,152 · updated 2026-08-06)*
 - **[Bug-Bounty-Agents](https://github.com/matty69v/Bug-Bounty-Agents)** 🟢 — 43 AI agent personas for Claude Code / Copilot / Cursor across the bug-bounty lifecycle. *(★ 363 · updated 2026-04-30)*
 - **[ai-exploits](https://github.com/protectai/ai-exploits)** 🟢 — Real-world AI/ML exploits (Metasploit modules + Nuclei templates) for MLflow, Ray, H2O. *(Protect AI)* *(★ 1,744 · updated 2024-10-23)*
+- **[CyberGym](https://github.com/sunblaze-ucb/cybergym)** 🟢🔬 — Large-scale evaluation framework for AI-agent vulnerability analysis on real-world tasks, with locally deployed challenge infrastructure, task generation, and proof-of-concept validation. *(UC Berkeley / Sunblaze)* — **note:** deploy only in an isolated local environment; the full benchmark runtime is extremely large (documentation cites up to ~10 TB) and must not be exposed to the public internet. *(★ 682 · updated 2026-08-04)*
+  - **Related:** [Cybench](https://github.com/andyzorigin/cybench) · [CVE-Bench](https://github.com/uiuc-kang-lab/cve-bench)
+- **[CVE-Bench](https://github.com/uiuc-kang-lab/cve-bench)** 🟢🔬 — ICML 2025 benchmark that evaluates AI agents against reproducible Docker environments for real critical-severity web-application CVEs and exploit objectives. — **note:** runs intentionally vulnerable services and should be used only in isolated environments; arm64 support is experimental. *(★ 266 · updated 2026-01-14)*
+  - **Related:** [CyberGym](https://github.com/sunblaze-ucb/cybergym) · [BountyBench](https://github.com/bountybench/bountybench)
 
 ---
 
