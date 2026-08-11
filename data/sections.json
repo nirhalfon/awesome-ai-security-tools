@@ -5357,6 +5357,26 @@
           }
         },
         {
+          "name": "LLMVault",
+          "repo": "CyberSunil/LLMVault",
+          "desc": "Intentionally vulnerable LLM security-training platform with OWASP LLM Top 10 labs, CTF-style challenges, hints, scoring, and mitigation guidance.",
+          "license": "MIT",
+          "status": [
+            "open_source",
+            "research"
+          ],
+          "flags": [
+            "heavy_runtime",
+            "authorized_testing_only"
+          ],
+          "note": "— **note:** deliberately vulnerable training target; run only in an isolated, authorized environment. Live Mode optionally requires Ollama or provider credentials.",
+          "metrics": {
+            "stars": 284,
+            "updated": "2026-08-10",
+            "snapshot": "2026-08-11"
+          }
+        },
+        {
           "name": "Damn Vulnerable LLM Agent",
           "repo": "ReversecLabs/damn-vulnerable-llm-agent",
           "org": "ReversecLabs / WithSecure",

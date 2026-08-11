@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-09. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-11. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -576,7 +576,7 @@ Offensive agents and the benchmarks used to evaluate them.
 - **[ExploitBench](https://github.com/exploitbench/exploitbench)** 🔬 — Measures AI-agent progress on V8/Chromium exploit ladders. *(★ 324 · updated 2026-07-04)*
 - **[AI Goat](https://github.com/dhammon/ai-goat)** 🟢🔬⚠️ — Vulnerable-by-design local LLM CTF for learning prompt injection, insecure output handling, data leakage, excessive agency, and related LLM app risks. — **note:** GPL-2.0 licensed. *(★ 354 · updated 2024-08-22)*
 - **[AIGoat](https://github.com/AISecurityConsortium/AIGoat)** 🟢🔬⚠️ — Local-first vulnerable LLM security playground with guided OWASP LLM Top 10 attack labs, CTF challenges, progressive defenses, and an Ollama-backed AI shopping-assistant target. — **note:** platform code is Apache-2.0, but training/challenge content is CC BY-NC-SA-4.0 and requires permission for commercial workshops. *(★ 74 · updated 2026-04-24)*
-- **[LLMVault](https://github.com/CyberSunil/LLMVault)** 🛡️ 🎯 — Intentionally vulnerable LLM application for hands-on OWASP Top 10 for LLM Applications training, featuring CTF-style labs, exploitation challenges, hints, scoring, and mitigation guidance. *(★ 170 · updated 2026-08-11)*
+- **[LLMVault](https://github.com/CyberSunil/LLMVault)** 🟢🔬 — Intentionally vulnerable LLM security-training platform with OWASP LLM Top 10 labs, CTF-style challenges, hints, scoring, and mitigation guidance. — **note:** deliberately vulnerable training target; run only in an isolated, authorized environment. Live Mode optionally requires Ollama or provider credentials. *(★ 284 · updated 2026-08-10)*
 - **[Damn Vulnerable LLM Agent](https://github.com/ReversecLabs/damn-vulnerable-llm-agent)** 🟢🔬 — Deliberately vulnerable LangChain ReAct agent for practicing prompt-injection and Thought/Action/Observation injection attacks. *(ReversecLabs / WithSecure)* *(★ 501 · updated 2025-06-25)*
   - **Related:** [spikee](https://github.com/ReversecLabs/spikee)
 - **[claude-bug-bounty](https://github.com/shuvonsec/claude-bug-bounty)** 🟢 — Claude Code plugin orchestrating recon → vuln classes → reporting. *(★ 4,152 · updated 2026-08-06)*
