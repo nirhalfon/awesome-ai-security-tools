@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-11. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-13. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -265,6 +265,7 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
 - **[ShiftGrid](https://github.com/BuFuuu/shiftgrid)** 🟢 — Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API. — **note:** early-stage local Docker application with no built-in authentication; keep its API and UI ports bound to localhost. *(★ 36 · updated 2026-08-02)*
 - **[BugTraceAI](https://github.com/BugTraceAI/BugTraceAI-CLI)** 🟢⚠️ — Self-hosted autonomous web-application security scanner that combines reconnaissance, specialist exploit agents, Go fuzzers, and Playwright validation to produce evidence-backed findings. *(BugTraceAI)* — **note:** AGPL-3.0 licensed and beta; use only for authorized testing. Requires an LLM provider or local Ollama endpoint and a substantial Docker/Playwright/Go runtime. *(★ 164 · updated 2026-07-30)*
   - **Related:** [Project overview](https://github.com/BugTraceAI/BugTraceAI) · [Web dashboard](https://github.com/BugTraceAI/BugTraceAI-WEB) · [Docker launcher](https://github.com/BugTraceAI/BugTraceAI-Launcher)
+- **[HunterX](https://github.com/nullc0d30/HunterX)** 🟢 — AI-assisted offensive security engine that orchestrates reconnaissance, security-tool coordination, vulnerability detection and validation, evidence collection, and report-ready findings in one workflow. *(NullC0d3)* *(★ 10 · updated 2026-08-13)*
 
 ---
 
