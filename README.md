@@ -30,6 +30,7 @@ GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; r
   - [AI/ML-Assisted Detection Rules & Engines](#aiml-assisted-detection-rules--engines)
   - [Defensive Trained-Model Detectors](#defensive-trained-model-detectors)
 - [AI-Powered SAST & Secure Code Review](#ai-powered-sast--secure-code-review)
+- [AI-Powered Threat Modeling](#ai-powered-threat-modeling)
 - [LLM-Driven Fuzzing](#llm-driven-fuzzing)
   - [Harness / target generation](#harness--target-generation)
   - [Fuzzing the LLM](#fuzzing-the-llm)
@@ -355,6 +356,17 @@ Static analysis and secure code review enhanced with LLMs.
 
 ---
 
+## AI-Powered Threat Modeling
+
+Architecture-level threat model generation and design-phase risk analysis driven by LLM reasoning.
+
+- **[tachi](https://github.com/davidmatousek/tachi)** 🟢 — Threat modeling and AI-reasoning vulnerability detection harness for Claude Code that dispatches 14 specialized threat agents (6 STRIDE, 5 LLM, 3 agentic) against an architecture description in Mermaid, C4, PlantUML, ASCII, or free text, producing SARIF 2.1.0 for code scanning, MAESTRO seven-layer classification, attack trees, CVSS-aligned composite risk scores, compensating-controls analysis of the target codebase, and a PDF report. *(David Matousek)* — **note:** runs inside Claude Code; architecture descriptions are processed by the configured Claude model. *(★ 89 · updated 2026-08-13)*
+  - **Related:** [STRIDE GPT](https://github.com/mrwadams/stride-gpt) · [defending-code-reference-harness](https://github.com/anthropics/defending-code-reference-harness)
+- **[STRIDE GPT](https://github.com/mrwadams/stride-gpt)** 🟢 — LLM-powered threat modeling tool that generates STRIDE threat models, attack trees, data flow diagrams, DREAD risk scores, mitigations, and Gherkin test cases from application descriptions, architecture diagrams, or codebases (agentic analysis mode), with OWASP LLM Top 10 and Agentic (ASI) coverage, MITRE ATT&CK/ATLAS mapping, Markdown/JSON/SARIF/HTML output, and broad LLM provider support via LiteLLM including local hosting. *(Matthew Adams)* *(★ 1,100 · updated 2026-08-12)*
+  - **Related:** [tachi](https://github.com/davidmatousek/tachi)
+
+---
+
 ## LLM-Driven Fuzzing
 
 Two families: (a) LLMs generating harnesses/targets for traditional fuzzing, and (b) fuzzing the LLM itself.
@@ -639,6 +651,7 @@ AI tooling for cloud/IaC security, digital forensics, OSINT, and phishing detect
 - **[awesome-security-for-ai](https://github.com/zmre/awesome-security-for-ai)** — Products for securing AI systems. *(★ 92 · updated 2024-06-13)*
 - **[awesome-gpt-security](https://github.com/cckuailong/awesome-gpt-security)** — GPT/LLM security tools and cases. *(★ 666 · updated 2026-07-24)*
 - **[awesome-threat-intelligence](https://github.com/hslatman/awesome-threat-intelligence)** — Classic CTI list (pairs with the AI-CTI section). *(★ 10,510 · updated 2026-05-31)*
+- **[awesome-threat-modelling](https://github.com/hysnsec/awesome-threat-modelling)** — General-purpose threat modeling list — methodologies and non-AI tools (Threat Dragon, pytm, Threagile); dormant since 2023 but a solid reference. *(★ 1,793 · updated 2023-07-15)*
 
 ---
 
