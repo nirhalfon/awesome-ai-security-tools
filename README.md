@@ -7,7 +7,7 @@
 
 **Type legend:** 🟢 public source / open-source · 🔬 research (paper / benchmark / dataset / framework) · 🟠 commercial with open components · ⚠️ restrictive, non-commercial, or unclear/no license — check before use.
 
-GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-13. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
+GitHub-hosted entries show static **★ stars** and **last-commit** snapshots; refresh them with `python3 scripts/update_github_metrics.py` before release. Latest snapshot: 2026-08-15. Hugging Face model entries show license, access, and artifact metadata. Ordering within a section favors flagship and actively maintained projects.
 
 ---
 
@@ -85,8 +85,8 @@ Securing the AI agents themselves — auditing coding agents (Claude Code, Codex
   - **Related:** [SkillSpector](https://github.com/NVIDIA/SkillSpector) · [Cisco AI Defense – skill-scanner](https://github.com/cisco-ai-defense/skill-scanner) · [Cisco AI Defense – mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner)
 - **[mcp-armor](https://github.com/aira-security/mcp-armor)** 🟢 — Local MCP security scanner with auto-discovery for agentic IDE configs, tool/resource/prompt inventory, prompt-injection checks, rug-pull and tool-poisoning detection, baseline drift monitoring, and JSON/Markdown reports. *(Aira Security)* *(★ 117 · updated 2026-03-27)*
   - **Related:** [SkillSpector](https://github.com/NVIDIA/SkillSpector) · [Ramparts](https://github.com/highflame-ai/ramparts) · [Cisco AI Defense – mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner)
-- **[aguara](https://github.com/garagon/aguara)** 🟢 — Single-binary static scanner (Go, no LLM) for AI-agent skills and MCP servers; multi-layer engine (pattern + NLP + taint tracking + rug-pull detection). Companion **[aguara-mcp](https://github.com/garagon/aguara-mcp)** exposes scanning as an MCP tool. *(★ 85 · updated 2026-07-24)*
-  - **Related:** [aguara-mcp](https://github.com/garagon/aguara-mcp) · [agent-audit](https://github.com/scadastrangelove/agent-audit) · [Snyk Agent Scan](https://github.com/snyk/agent-scan) · [Cisco AI Defense – skill-scanner](https://github.com/cisco-ai-defense/skill-scanner)
+- **[aguara](https://github.com/garagon/aguara)** 🟢 — Single-binary static scanner (Go, no LLM) for AI-agent skills and MCP servers; multi-layer engine (pattern + NLP + taint tracking + rug-pull detection). Companion **[aguara-mcp](https://github.com/garagon/mcp-aguara)** exposes scanning as an MCP tool. *(★ 85 · updated 2026-07-24)*
+  - **Related:** [aguara-mcp](https://github.com/garagon/mcp-aguara) · [agent-audit](https://github.com/scadastrangelove/agent-audit) · [Snyk Agent Scan](https://github.com/snyk/agent-scan) · [Cisco AI Defense – skill-scanner](https://github.com/cisco-ai-defense/skill-scanner)
 - **[agent-scan](https://github.com/snyk/agent-scan)** 🟢 — Security scanner for AI agents, MCP servers, and agent skills; the successor path for the original Invariant Labs mcp-scan work. *(Snyk)* *(★ 2,878 · updated 2026-08-06)*
   - **Related:** [aguara](https://github.com/garagon/aguara) · [Cisco AI Defense – mcp-scanner](https://github.com/cisco-ai-defense/mcp-scanner) · [Cisco AI Defense – skill-scanner](https://github.com/cisco-ai-defense/skill-scanner)
 - **[inkog](https://github.com/inkog-io/inkog)** 🟠 — Commercial-backed static security scanner for AI agents across LangChain, LangGraph, CrewAI, AutoGen, and no-code workflows; Apache-2.0 CLI with proprietary deep-scan engine. *(Inkog)* *(★ 28 · updated 2026-06-07)*
@@ -265,7 +265,7 @@ Autonomous and semi-autonomous AI agents for penetration testing, exploitation, 
 - **[ShiftGrid](https://github.com/BuFuuu/shiftgrid)** 🟢 — Prompt engine that turns Claude Code into a transparent, human-in-the-loop pentester, structuring engagements through checklists, observations, and notes exposed via an agent-facing API. — **note:** early-stage local Docker application with no built-in authentication; keep its API and UI ports bound to localhost. *(★ 36 · updated 2026-08-02)*
 - **[BugTraceAI](https://github.com/BugTraceAI/BugTraceAI-CLI)** 🟢⚠️ — Self-hosted autonomous web-application security scanner that combines reconnaissance, specialist exploit agents, Go fuzzers, and Playwright validation to produce evidence-backed findings. *(BugTraceAI)* — **note:** AGPL-3.0 licensed and beta; use only for authorized testing. Requires an LLM provider or local Ollama endpoint and a substantial Docker/Playwright/Go runtime. *(★ 164 · updated 2026-07-30)*
   - **Related:** [Project overview](https://github.com/BugTraceAI/BugTraceAI) · [Web dashboard](https://github.com/BugTraceAI/BugTraceAI-WEB) · [Docker launcher](https://github.com/BugTraceAI/BugTraceAI-Launcher)
-- **[HunterX](https://github.com/nullc0d30/HunterX)** 🟢 — AI-assisted offensive security engine that orchestrates reconnaissance, security-tool coordination, vulnerability detection and validation, evidence collection, and report-ready findings in one workflow. *(NullC0d3)* *(★ 10 · updated 2026-08-13)*
+- **[HunterX](https://github.com/nullc0d30/HunterX)** 🟢 — AI-assisted offensive security engine that orchestrates reconnaissance, security-tool coordination, vulnerability detection and validation, evidence collection, and report-ready findings in one workflow. *(NullC0d3)* — **note:** early-stage and tool-orchestration-heavy; run only in an isolated, authorized assessment environment. *(★ 11 · updated 2026-08-14)*
 
 ---
 

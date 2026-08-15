@@ -308,14 +308,14 @@
             {
               "name": "aguara",
               "repo": "garagon/aguara",
-              "desc": "Single-binary static scanner (Go, no LLM) for AI-agent skills and MCP servers; multi-layer engine (pattern + NLP + taint tracking + rug-pull detection). Companion **[aguara-mcp](https://github.com/garagon/aguara-mcp)** exposes scanning as an MCP tool.",
+              "desc": "Single-binary static scanner (Go, no LLM) for AI-agent skills and MCP servers; multi-layer engine (pattern + NLP + taint tracking + rug-pull detection). Companion **[aguara-mcp](https://github.com/garagon/mcp-aguara)** exposes scanning as an MCP tool.",
               "status": [
                 "open_source"
               ],
               "related": [
                 {
                   "label": "aguara-mcp",
-                  "url": "https://github.com/garagon/aguara-mcp"
+                  "url": "https://github.com/garagon/mcp-aguara"
                 },
                 {
                   "label": "agent-audit",
@@ -2469,12 +2469,15 @@
             "open_source"
           ],
           "flags": [
+            "early_stage",
+            "heavy_runtime",
             "authorized_testing_only"
           ],
+          "note": "— **note:** early-stage and tool-orchestration-heavy; run only in an isolated, authorized assessment environment.",
           "metrics": {
-            "stars": 10,
-            "updated": "2026-08-13",
-            "snapshot": "2026-08-13"
+            "stars": 11,
+            "updated": "2026-08-14",
+            "snapshot": "2026-08-15"
           }
         }
       ]
